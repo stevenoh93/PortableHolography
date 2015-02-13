@@ -1,5 +1,0 @@
-img1 = imread('img1.jpg');
-img1 = img1(400:820,550:1300,:);
-img1bw = img1(:,:,2);
-img1edged = edge(img1bw,'sobel');
-
