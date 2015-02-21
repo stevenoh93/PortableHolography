@@ -1,6 +1,5 @@
 function [ xs,ys ] = img2col( I )
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+% Convert binary image I (NxM) to column vectors 
     sizex = size(I,2);
     sizey = size(I,1);
     xs = zeros(sizex,1);
@@ -17,7 +16,6 @@ function [ xs,ys ] = img2col( I )
             end
         end
     end
-    xs = flipud(xs(1:find(xs,1,'last')));
-    ys = flipud(ys(1:find(ys,1,'last')));
+    xs = xs(1:find(xs,1,'last'));
+    ys = ys(1:find(ys,1,'last'));
 end
-
