@@ -31,10 +31,9 @@ pause(0.2)
 end
 
 while c==1 
-
-[a,b,c]=ginput(1);
-las_x=[las_x;a];las_y=[las_y;b];
-line(las_x,las_y)
+    [a,b,c]=ginput(1);
+    las_x=[las_x;a];las_y=[las_y;b];
+    line(las_x,las_y)
 end;
 
 las_x(length(las_x)+1)=las_x(1);

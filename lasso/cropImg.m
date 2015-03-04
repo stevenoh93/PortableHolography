@@ -1,9 +1,9 @@
 %% Read images with prefixes of certain format.
 %  Returns cells each containing b/w images with edge detection
 
-imgPre = 'img360';
+imgPre = 'img36015';
 imgType = '.jpg';
-N = 18;
+N = 36;
 fudge = 1;
 xoff = 150;
 yoff = 500;
