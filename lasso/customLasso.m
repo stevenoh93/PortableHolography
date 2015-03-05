@@ -1,10 +1,13 @@
 function [  ] = customLasso( I )
 %%%% Mouse-drag magnetic lasso %%%%
 key = 0;
-global sizey;
-global sizex;
+global minsize;
+global img
+img = I;
 sizey = size(I,1);
 sizex = size(I,2);
+disp(sizey);
+disp(sizex);
 minsize = min(sizey, sizex);
 C = 0;
 
@@ -46,16 +49,65 @@ function buttonDown(object, event)
 function buttonMotion(object, event)
     global centerx;
     global centery;
-    global fig;
-    global sizey;
-    global sizex;
-    C = get(fig, 'CurrentPoint');
-    dx = C(1)-centerx;
-    dy = C(2)-centery;
-%     disp(['dx = ' num2str(dx)]);
-%     disp(['dy = ' num2str(dy)]);
-    disp(['c1 = ' num2str(C(1))]);
-    disp(['c2 = ' num2str(C(2))]);
+    global img
+    global minsize
+    thresh = 3;
+    s = size(img);
+    disp(s);
+
+    C = get(gca,'CurrentPoint');
+    cp = [C(3) C(1)];
+    if(abs(cp(1)) < 1)
+        dy = 0;
+    else
+        dy = cp(1)-centery;
+    end
+    if(abs(cp(2)) < 1)
+        dx = 0;
+    else
+        dx = cp(2)-centerx;
+    end
+    
+    mind = min(dx,dy);
+    dir = [round(dy/mind) round(dx/mind)];
+    
+    disp(['dx = ' num2str(dir(2))]);
+    disp(['dy = ' num2str(dir(1))]);
+    np = cp;
+    while 1
+        cp = np;
+        if(abs(cp(1)) < 1)
+            dy = 0;
+        else
+            dy = cp(1)-centery;
+        end
+        if(abs(cp(2)) < 1)
+            dx = 0;
+        else
+            dx = cp(2)-centerx;
+        end
+        mind = min(dx,dy);
+        dir = [round(dy/mind) round(dx/mind)];
+        np = cp + dir*10;
+        % Compare pixel values between cp and np
+%         ind1 = sub2ind(s,np(1),np(2));
+%         ind2 = sub2ind(s,cp(1),cp(2));
+%         disp(class(ind1));
+        contr = abs(img(round(sub2ind(s,np(1),np(2)))) - img(round(sub2ind(s,cp(1),cp(2)))));
+        dist = sum((np-[centery centerx])*(np-[centery centerx])');
+        disp(['contr = ' num2str(contr)]);
+        disp(['dst = ' num2str(dist)]);
+        if(contr > thresh)
+            hold on;
+            scatter(cp(2)+dir(2),cp(1)+dir(1),minsize/25,'o');
+            break;
+        end
+        if(dist < 3000)
+            disp('too close to the center');
+            break;
+        end
+%         break;
+    end
 
 
 function buttonUp(object, event)
