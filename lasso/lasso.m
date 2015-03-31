@@ -49,7 +49,8 @@ ev_in=find(in>0);
 selx=x(ev_in);
 sely=y(ev_in);
 
-figure,plot(x,y,'b.',selx,sely,'g.');
+% figure,plot(x,y,'b.',selx,sely,'g.');
+figure,plot(selx,sely,'g.');
 legend(num2str([length(x)-length(selx);length(selx)]));
 
 indexnr=ev_in;
