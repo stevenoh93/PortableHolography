@@ -1,0 +1,1 @@
+aluminum shit, 15 30 elevation angles, closest radius, all around 0 to 340 increment 20
