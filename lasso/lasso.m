@@ -23,6 +23,10 @@ las_y=[];
 c=1;
 
 key=0;
+disp('Draw a rectangle around the object you wish to select first. Double click to select')
+h = imrect;
+ps = wait(h);
+axis([ps(1),ps(1)+ps(3), ps(2), ps(2)+ps(4)]);
 
 disp('press a KEY to start selection by mouse, LEFT mouse button for selection, RIGHT button closes loop')
 while key==0
@@ -50,7 +54,7 @@ selx=x(ev_in);
 sely=y(ev_in);
 
 % figure,plot(x,y,'b.',selx,sely,'g.');
-figure,plot(selx,sely,'g.');
-legend(num2str([length(x)-length(selx);length(selx)]));
+% figure,plot(selx,sely,'g.');
+% legend(num2str([length(x)-length(selx);length(selx)]));
 
 indexnr=ev_in;
