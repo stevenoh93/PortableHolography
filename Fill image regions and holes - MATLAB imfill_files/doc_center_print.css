@@ -1,0 +1,77 @@
+/*
+-----------------------------------
+TOC
+-----------------------------------
+
+Bootstrap Overrides:......Changes to base-Bootstrap CSS
+
+Page Globals:.............Styling of HTML and BODY
+
+Site Elements:............Re-usable site elements 	
+
+Structure:................Site structural components
+
+Section Specific:.........Styles for Home and all Sub Pages
+
+Page/Element Specific:....Page, element or flow Specific CSS
+
+Additive CSS:.............Additive/override CSS
+
+Responsive:...............Specific styles for Desktop, Tablet and Mobile
+
+*/
+
+
+/*-----------------------------------
+   Page Globals
+-------------------------------------*/
+html body { background:#fff none; overflow:visible !important; }
+
+
+
+/*-----------------------------------
+   Structure
+-------------------------------------*/
+
+/* ---- Template ---- */
+.row-offcanvas,
+.row-offcanvas.active { margin-left: 0 !important; left: 0 !important; position: relative !important; }
+
+.sidebar-offcanvas { display: none !important; }
+
+/* ---- Header ---- */
+#header { display: none !important; }
+
+/* ---- Section Header ---- */
+.section_header { display: none !important; }
+
+/* ---- CTAs ---- */
+.cta_box { display: none; }
+
+/* ---- Content ---- */
+.row-offcanvas #content_container { font-size:12px; overflow:visible !important; }
+.row-offcanvas.active #content_container { width: 100%; margin-left: -270px; font-size:14px; overflow:visible !important; }
+
+	a[href]:after { content:"" !important; }
+
+	.doc_topic_desc #expandAllPage { display:none; }
+
+	.feedbackblock { display:none; }
+
+	.doc_nda_notice { margin-bottom:30px; }
+
+	#go-top { display: none !important; }
+
+/* ---- Body Trail ---- */
+.body_trail_container { display: none; }
+
+/* ---- Footer ---- */
+#footer { display:none; }
+
+
+
+/*-----------------------------------
+   Additive CSS
+-------------------------------------*/
+
+.add_border_left:before { border: none !important; }

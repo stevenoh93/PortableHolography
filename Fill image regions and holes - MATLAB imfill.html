@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://www.mathworks.com/help/images/ref/imfill.html -->
+<html class="wf-museoslab-n7-active wf-futurapt-n4-active wf-futurapt-i4-active wf-futurapt-n5-active wf-futurapt-i5-active wf-futurapt-n7-active wf-futurapt-i7-active wf-automate-n7-active wf-minionprosubhead-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Fill image regions and holes - MATLAB imfill</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="./Fill image regions and holes - MATLAB imfill_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="./Fill image regions and holes - MATLAB imfill_files/site6.css" rel="stylesheet" type="text/css">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_lg.css?20150306" rel="stylesheet" media="screen and (min-width: 1200px)">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_md.css?20150306" rel="stylesheet" media="screen and (min-width: 992px) and (max-width: 1199px)">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_sm+xs.css?20150306" rel="stylesheet" media="screen and (max-width: 991px)">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_sm.css?20150306" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_xs.css?20150306" rel="stylesheet" media="screen and (max-width: 767px)">
+<!--[if IE 8]>
+<link href="/includes_content/responsive/css/site6_ie8.css?20150306" rel="stylesheet" type="text/css">
+<script src="/includes_content/responsive/scripts/bootstrap/html5shiv-printshiv.js"></script>
+<script src="/includes_content/responsive/scripts/bootstrap/respond.min.js"></script>
+<script src="/includes_content/responsive/scripts/bootstrap/placeholders.min.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<link href="/includes_content/responsive/css/site6_ie9.css?20150306" rel="stylesheet" type="text/css">
+<script src="/includes_content/responsive/scripts/bootstrap/placeholders.min.js"></script>
+<![endif]-->
+<link href="./Fill image regions and holes - MATLAB imfill_files/site6_offcanvas.css" rel="stylesheet" type="text/css">
+<!--[if IE 8]>
+<link href="/includes_content/responsive/css/site6_offcanvas_ie8.css?20150306" rel="stylesheet" type="text/css">
+<script src="/includes_content/responsive/scripts/bootstrap/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" async="" src="./Fill image regions and holes - MATLAB imfill_files/ahy.js"></script><script src="./Fill image regions and holes - MATLAB imfill_files/aquant.js" async="" type="text/javascript"></script><script src="./Fill image regions and holes - MATLAB imfill_files/jquery-latest.js"></script>
+<script src="./Fill image regions and holes - MATLAB imfill_files/jquery.mobile.custom.min.js"></script>
+<script src="./Fill image regions and holes - MATLAB imfill_files/bootstrap.min.js"></script>
+<script src="./Fill image regions and holes - MATLAB imfill_files/global.js"></script>
+<script src="./Fill image regions and holes - MATLAB imfill_files/xvy5baa.js"></script>
+<style type="text/css">.tk-museo-slab{font-family:"museo-slab",serif;}.tk-futura-pt{font-family:"futura-pt","Arial","Helvetica",sans-serif;}.tk-automate{font-family:"automate",sans-serif;}.tk-minion-pro-subhead{font-family:"minion-pro-subhead",serif;}</style><link rel="stylesheet" href="http://fonts.mathworks.com/k/xvy5baa-d.css?3bb2a6e53c9684ffdc9a99f11f5b2a6259e9e580e4938fcb487bcb48ad765cb4c66326ede94ac48d6ede67e4500a24e97a0591ac31cb9a79f653770995b73fcab179c8843e167d4d294efffce20684477e3030043617caba214c58b6f154839e39f8538e92cdd7798839d1a59e4d2b0791bbe6e783a84640f50c6e8f631ac5fd6e2928747046e8d3c8014f4e612066d47cd2f6460236d5af8067bf5be13b5d402fc9b57daa008f4648c576b0daffc4a09719f26748e4d12162f1841b44cd6114f823631817018292249f9424158262729aedfc9a7eaad686e19704ecf794505a5bf58346b86674958b71b58f71e596df71adc85eb06870a8aa3fa53e996a1fc9a87139ba5f47c506b20f3f5af733a35e32b903f3ea3ad28c5600e222fef219fa6d117c0d627897884abcb24d233482306c08ad5732c7ff2a2566cd5fa9554fc45a683e4492630af7837ac201efe374b4410a1ebb0f78147daed230fd70b646914a1bf60c1e5586d424a9779647a2ccd561f26b04a124f9"><script>try{Typekit.load();}catch(e){}</script>
+<!-- BEGIN Adobe DTM -->
+<script src="./Fill image regions and holes - MATLAB imfill_files/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js"></script><script src="./Fill image regions and holes - MATLAB imfill_files/mbox-contents-95c6a4d9c82a8d20476522984666120b54192e9b.js"></script><style>.mboxDefault { visibility:hidden; }</style>
+<!-- END Adobe DTM -->
+<link href="./Fill image regions and holes - MATLAB imfill_files/doc_center.css" rel="stylesheet" type="text/css">
+<!--[if IE 8]>
+<link href="/includes_content/releases/R2015a/css/doc_center_ie8.css?20150306" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 9]>
+<link href="/includes_content/releases/R2015a/css/doc_center_ie9.css?20150306" rel="stylesheet" type="text/css">
+<![endif]-->
+<link href="./Fill image regions and holes - MATLAB imfill_files/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script src="./Fill image regions and holes - MATLAB imfill_files/doc_scrollspy.js"></script>
+<link rel="stylesheet" href="./Fill image regions and holes - MATLAB imfill_files/docstyle.css" type="text/css">
+<meta name="chunktype" content="refpage">
+<meta name="refentity" itemprop="refentity" content="function:imfill">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="fcn">
+<meta name="infotype" itemprop="infotype" content="ref/function">
+<meta name="description" itemprop="description" content="This MATLAB function displays the binary image BW on the screen and lets you define the region to fill by selecting points interactively with the mouse.">
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/l10n.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/docscripts.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/mw.toc.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/mw.imagescaling.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/mw.imageanimation.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/jquery.highlight.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/nanoscroller.min.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/doc_omniture.js"></script>
+<!-- Additions/overrides from the doc side -->
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/docsearch.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/jquery.toggleval.js"></script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/MathRenderer.js"></script><style type="text/css">math { visibility: hidden; }</style><link type="text/css" rel="stylesheet" href="./Fill image regions and holes - MATLAB imfill_files/main.css"><script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/dojo.js"></script>
+<style type="text/css"></style><style type="text/css" id="ki-tz7-te"></style><style type="text/css" id="ki-tz7-t8"></style></head>
+  
+<body id="responsive_offcanvas" class="no_animate">
+
+  <!-- Mobile TopNav: Start -->
+<div class="header visible-xs visible-sm" id="header_mobile">
+<nav class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle topnav_toggle" data-toggle="collapse" data-target="#topnav_collapse">
+<span class="sr-only">Toggle Main Navigation</span>
+<span class="icon-menu"></span>
+</button>
+<a href="http://www.mathworks.com/index.html?s_tid=gn_logo" class="svg_link navbar-brand">
+<object data="http://www.mathworks.com/images/responsive/global/pic-header-mathworks-logo.svg" alt="MathWorks" class="mw_logo" type="image/svg+xml">
+<img src="./Fill image regions and holes - MATLAB imfill_files/pic-header-mathworks-logo.png" class="mw_logo" alt="MathWorks">
+</object>
+</a>
+</div>
+</div>
+</div>
+<div class="row visible-xs visible-sm">
+<div class="col-xs-12">
+<div class="navbar-collapse collapse" id="topnav_collapse">
+<ul class="nav navbar-nav" id="topnav">
+<li class="topnav_products "><a href="http://www.mathworks.com/products/?s_tid=gn_ps">Products</a></li>
+<li class="topnav_solutions "><a href="http://www.mathworks.com/solutions/?s_tid=gn_sol">Solutions</a></li>
+<li class="topnav_academia "><a href="http://www.mathworks.com/academia/?s_tid=gn_acad">Academia</a></li>
+<li class="topnav_support "><a href="http://www.mathworks.com/support/?s_tid=gn_supp">Support</a></li>
+<li class="topnav_community "><a href="http://www.mathworks.com/matlabcentral/?s_tid=gn_mlc">User Community</a></li>
+<li class="topnav_events "><a href="http://www.mathworks.com/company/events/?s_tid=gn_ev">Events</a></li>
+<li class="topnav_company "><a href="http://www.mathworks.com/company/?s_tid=gn_co">Company</a></li>
+<li class="headernav_contact"><a href="http://www.mathworks.com/company/aboutus/contact_us/?s_tid=gn_cntus">Contact Us</a></li>
+<li class="headernav_store"><a href="http://www.mathworks.com/store/default.do?s_cid=store_top_nav&s_tid=gn_store">How To Buy</a></li>
+<li class="headernav_login dropdown">
+<a href="http://www.mathworks.com/help/images/ref/imfill.html#" class="dropdown-toggle" data-toggle="dropdown">
+Log In
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu" id="mwa-nav">
+<li class="mwa-nav_logout"><a id="mwa-log_in" href="https://www.mathworks.com/accesslogin/login.do?uri=http://www.mathworks.com/help/images/ref/imfill.html">Log In</a></li>
+<li class="mwa-nav_account"><a id="mwa-create_account" href="https://www.mathworks.com/accesslogin/createProfile.do?uri=http://www.mathworks.com/help/images/ref/imfill.html">Create Account</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<!-- Mobile TopNav: End -->
+<!-- Conjoined Header: Start -->
+<div class="sticky_header_container affix-top">
+<!-- Desktop TopNav: Start -->
+<div class="header hidden-xs hidden-sm" id="header_desktop">
+<nav class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+<div class="collapse navbar-collapse" id="headernav_collapse">
+<ul class="nav navbar-nav navbar-right" id="headernav">
+<li class="headernav_contact"><a href="http://www.mathworks.com/company/aboutus/contact_us/?s_tid=gn_cntus">Contact Us</a></li>
+<li class="headernav_store"><a href="http://www.mathworks.com/store/default.do?s_cid=store_top_nav&s_tid=gn_store">How To Buy</a></li>
+<li class="headernav_login dropdown">
+<a href="http://www.mathworks.com/help/images/ref/imfill.html#" class="dropdown-toggle" data-toggle="dropdown">
+Log In
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu" id="mwa-nav">
+<li class="mwa-nav_logout"><a id="mwa-log_in" href="https://www.mathworks.com/accesslogin/login.do?uri=http://www.mathworks.com/help/images/ref/imfill.html">Log In</a></li>
+<li class="mwa-nav_account"><a id="mwa-create_account" href="https://www.mathworks.com/accesslogin/createProfile.do?uri=http://www.mathworks.com/help/images/ref/imfill.html">Create Account</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="navbar-header">
+<div class="logo_container hidden-xs hidden-sm">
+<a href="http://www.mathworks.com/index.html?s_tid=gn_logo" class="svg_link pull-left">
+<object data="http://www.mathworks.com/images/responsive/global/pic-header-mathworks-logo.svg" alt="MathWorks" class="mw_logo" type="image/svg+xml">
+<img src="./Fill image regions and holes - MATLAB imfill_files/pic-header-mathworks-logo.png" alt="MathWorks">
+</object>
+</a>
+</div>
+<div class="navbar-collapse collapse hidden-xs hidden-sm">
+<ul class="nav navbar-nav" id="topnav">
+<li class="topnav_products "><a href="http://www.mathworks.com/products/?s_tid=gn_ps">Products</a></li>
+<li class="topnav_solutions "><a href="http://www.mathworks.com/solutions/?s_tid=gn_sol">Solutions</a></li>
+<li class="topnav_academia "><a href="http://www.mathworks.com/academia/?s_tid=gn_acad">Academia</a></li>
+<li class="topnav_support "><a href="http://www.mathworks.com/support/?s_tid=gn_supp">Support</a></li>
+<li class="topnav_community "><a href="http://www.mathworks.com/matlabcentral/?s_tid=gn_mlc">User Community</a></li>
+<li class="topnav_events "><a href="http://www.mathworks.com/company/events/?s_tid=gn_ev">Events</a></li>
+<li class="topnav_company "><a href="http://www.mathworks.com/company/?s_tid=gn_co">Company</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<!-- Desktop TopNav: End -->
+<!-- Section Header: Start -->
+<div class="section_header level_3">
+<div class="container-fluid">
+<div class="row" id="mobile_search_row">
+<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7" id="mobile_search">
+<div class="search_nested_content_container">
+<div id="search_scope_doc" class="collapse in">
+<form id="docsearch_form" name="docsearch_form" method="get" data-release="R2015a" data-language="en" action="http://www.mathworks.com/help/search.html">
+<div class="input-group tokenized_search_field">
+<label class="sr-only">Search MATLAB Documentation</label>
+<input type="text" class="form-control conjoined_search" autocomplete="off" name="qdoc" placeholder="Search R2015a Documentation" id="docsearch">
+<div class="input-group-btn">
+<button type="button" class="btn btn_search_adjacent dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span><span class="search_scope_label">Documentation</span></button>
+<ul class="dropdown-menu list-unstyled dropdown-menu-right" role="menu">
+<!-- <li data-toggle="collapse" data-target="#search_scope_doc"><a href="#">Documentation</a></li> -->
+<li data-toggle="collapse" data-target="#search_scope_support" class="doc_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/imfill.html#">Support</a></li>
+<li data-toggle="collapse" data-target="#search_scope_site" class="doc_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/imfill.html#">MathWorks</a></li>
+</ul>
+<script>
+$(".doc_search_scope_trigger").click(function() {
+$("#search_scope_doc").removeClass("in");
+});
+</script>
+<button type="submit" name="submitsearch" id="submitsearch" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1" disabled=""></button>
+</div>
+</div>
+</form>
+</div>
+<div id="search_scope_support" class="collapse">
+<form id="support_search" action="http://www.mathworks.com/support/search_results.html" method="get" accept-charset="utf-8">
+<div class="input-group">
+<label class="sr-only">Search All Support Resources</label>
+<input id="suggestion" type="hidden" name="suggestion" value="">
+<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+<input id="search" class="form-control conjoined_search" type="text" name="q" placeholder="Search All Support Resources" autocomplete="off">
+<div class="input-group-btn">
+<button type="button" class="btn btn_search_adjacent dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span><span class="search_scope_label">Support</span></button>
+<ul class="dropdown-menu list-unstyled dropdown-menu-right" role="menu">
+<li data-toggle="collapse" data-target="#search_scope_doc" class="support_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/imfill.html#">Documentation</a></li>
+<!--<li data-toggle="collapse" data-target="#search_scope_support"><a href="#">Support</a></li>-->
+<li data-toggle="collapse" data-target="#search_scope_site" class="support_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/imfill.html#">MathWorks</a></li>
+</ul>
+<script>
+$(".support_search_scope_trigger").click(function() {
+$("#search_scope_support").removeClass("in");
+});
+</script>
+<button type="submit" name="submitsearch" id="support_submitsearch" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+</div>
+</div>
+</form>
+</div>
+<div id="search_scope_site" class="collapse">
+<form name="search" id="site_search" class="site_search" action="http://www.mathworks.com/searchresults/" method="get">
+<div class="input-group">
+<label class="sr-only">Search MathWorks.com</label>
+<input type="hidden" name="c[]" value="entire_site_en">
+<input type="text" name="q" id="query" class="form-control conjoined_search" placeholder="Search MathWorks.com" autocomplete="off" \="">
+<div class="input-group-btn">
+<button type="button" class="btn btn_search_adjacent dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span><span class="search_scope_label">MathWorks</span></button>
+<ul class="dropdown-menu list-unstyled dropdown-menu-right" role="menu">
+<li data-toggle="collapse" data-target="#search_scope_doc" class="site_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/imfill.html#">Documentation</a></li>
+<li data-toggle="collapse" data-target="#search_scope_support" class="site_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/imfill.html#">Support</a></li>
+<!--<li data-toggle="collapse" data-target="#search_scope_site" class="support_search_scope_trigger"><a href="#">MathWorks</a></li>-->
+</ul>
+<script>
+$(".site_search_scope_trigger").click(function() {
+$("#search_scope_site").removeClass("in");
+});
+</script>
+<button type="submit" id="searchbutton" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<button class="btn icon-remove btn_search pull-right icon_32 visible-xs" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+</div>
+<div class="col-xs-9 col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5">
+<div class="section_header_content">
+<h1>Documentation</h1>
+</div>
+</div>
+<div class="col-xs-3 visible-xs">
+<button class="btn icon-search btn_search pull-right icon_16" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+</div>
+</div>
+<script>
+$(".section_header h1").click(function(){
+$(window.location).attr('href', '/help');
+});
+</script>
+<!-- Section Header: End -->
+<!-- Mobile Local Nav: Start -->
+<!-- Mobile Local Nav: End -->
+</div>
+</div>
+<!-- Horo Nav: Start -->
+<div class="horizontal_nav_container">
+<div class="offcanvas_actuator active" data-toggle="offcanvas" data-target="#sidebar" id="nav_toggle">
+<button type="button" class="btn">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-menu icon_32"></span>
+</button>
+<span class="offcanvas_actuator_label"></span>
+<span class="offcanvas_actuator_close"></span>
+</div>
+<div class="offcanvas_horizontal_nav">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-12 hidden-xs">
+<div class="cta_box">
+<ul class="list-unstyled list-inline">
+<li class="cta_item cta_item_general"><a href="http://www.mathworks.com/programs/bounce/doc_tryit.html" class="icon-download">Trial Software</a></li>
+<li class="cta_item cta_item_general"><a href="http://www.mathworks.com/support/web_downloads_bounce.html?s_cid=1008_degr_docdn_270055" class="icon-download">Product Updates</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Horo Nav: End -->
+</div>
+<!-- Conjoined Header: End -->
+
+  <div class="row-offcanvas row-offcanvas-left active">
+    <div class="sidebar-offcanvas" id="sidebar" role="navigation">
+      <nav class="offcanvas_nav" role="navigation">
+          <ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_breadcrumb">
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="http://www.mathworks.com/help/index.html" itemprop="url"><span itemprop="title">All Products</span></a></li>
+</ul>
+
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_disambiguation">
+<li class="product"><a href="http://www.mathworks.com/help/images/index.html">Image Processing Toolbox</a>
+<div class="dropdown">
+<span class="icon-arrow-down icon_16" id="dropdownMenu1" data-toggle="dropdown"></span>
+<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/images/getting-started-with-image-processing-toolbox.html?s_cid=doc_flyout">Getting Started</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/images/examples.html?s_cid=doc_flyout">Examples</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/images/functionlist.html?s_cid=doc_flyout">Functions and Other Reference</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/images/release-notes.html?s_cid=doc_flyout">Release Notes</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/releases/R2015a/pdf_doc/images/index.html?s_cid=doc_flyout">PDF Documentation</a></li>
+</ul>
+</div>
+</li>
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="http://www.mathworks.com/help/images/image-enhancement-and-restoration.html" itemprop="url"><span itemprop="title">Image Enhancement</span></a></li>
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="http://www.mathworks.com/help/images/morphological-filtering.html" itemprop="url"><span itemprop="title">Morphological Operations</span></a></li>
+</ul>
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_disambiguation">
+<li><a href="http://www.mathworks.com/help/images/index.html">Image Processing Toolbox</a>
+</li>
+<li><a href="http://www.mathworks.com/help/images/code-generation.html" itemprop="url">Code Generation</a></li>
+</ul>
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_disambiguation">
+<li><a href="http://www.mathworks.com/help/images/index.html">Image Processing Toolbox</a>
+</li>
+<li><a href="http://www.mathworks.com/help/images/gpu-computing.html" itemprop="url">GPU Computing</a></li>
+</ul>
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_scrollspy nav">
+<li class="nav_scrollspy_function active"><a href="http://www.mathworks.com/help/images/ref/imfill.html#responsive_offcanvas">imfill</a></li>
+<li class="nav_scrollspy_title" id="SSPY810-refentry">On this page</li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#syntax" class="intrnllnk">Syntax</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#description" class="intrnllnk">Description</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#examples" class="intrnllnk">Examples</a><ul class="nav">
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hpj-1" class="intrnllnk">Fill Image from Specified Starting Point</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hpj-2" class="intrnllnk">Fill Holes in a Binary Image</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hpy-1" class="intrnllnk">Fill Holes in a Grayscale Image</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hqg-1" class="intrnllnk">Fill Operation on a GPU</a></li>
+</ul>
+</li><li><a href="http://www.mathworks.com/help/images/ref/imfill.html#inputs" class="intrnllnk">Input Arguments</a><ul class="nav">
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#input_argument_bw" class="intrnllnk">BW</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#input_argument_locations" class="intrnllnk">locations</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#input_argument_i" class="intrnllnk">I</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#input_argument_conn" class="intrnllnk">conn</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#input_argument_gpuarraya" class="intrnllnk">gpuarrayA</a></li>
+</ul>
+</li><li><a href="http://www.mathworks.com/help/images/ref/imfill.html#zmw57dd0e41776" class="intrnllnk">Output Arguments</a><ul class="nav">
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#output_argument_bw2" class="intrnllnk">BW2</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#output_argument_locations_out" class="intrnllnk">locations_out</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#output_argument_i2" class="intrnllnk">I2</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#output_argument_gpuarrayb" class="intrnllnk">gpuarrayB</a></li>
+</ul>
+</li><li><a href="http://www.mathworks.com/help/images/ref/imfill.html#moreabout" class="intrnllnk">More About</a><ul class="nav">
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hf7-1" class="intrnllnk">Tips</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hh9-1" class="intrnllnk">Algorithms</a></li>
+</ul>
+</li><li><a href="http://www.mathworks.com/help/images/ref/imfill.html#References" class="intrnllnk">References</a></li>
+<li><a href="http://www.mathworks.com/help/images/ref/imfill.html#zmw57dd0e42028" class="intrnllnk">See Also</a></li>
+</ul>
+
+      </nav>
+      <script src="./Fill image regions and holes - MATLAB imfill_files/offcanvas.js"></script>
+    </div>
+
+    <!-- MOBILE CTA - Begin -->
+    <!-- MOBILE CTA - End -->
+
+
+    <div class="content_container" id="content_container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            
+
+
+
+
+
+
+           
+     
+    
+           
+<section id="doc_center_content" lang="en"><div id="pgtype-ref-function"><div class="function_ref">
+  
+
+<span id="buo3g4l-1" class="anchor_target"></span><div itemprop="content"><h1 class="r2015a" itemprop="title">imfill</h1><!-- SYNCHTO: _bqj6g67.html --><div class="doc_topic_desc"><div class="purpose_container"><p itemprop="purpose">Fill image regions and holes</p><div class="switch"><a href="javascript:void(0);" id="expandAllPage" data-allexpanded="true">collapse all in page</a></div></div></div></div>
+<div class="ref_sect"><h2 id="syntax">Syntax</h2><div class="syntax_signature"><div class="syntax_signature_module"><ul><li><code class="synopsis">BW2 = imfill(BW)</code></li><li><code class="synopsis">[BW2,locations_out]
+= imfill(BW)</code></li><li><code class="synopsis">BW2= imfill(BW,locations)</code> <span class="syntax_example"><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hpj-1" class="intrnllnk">example</a></span></li><li><code class="synopsis">BW2= imfill(BW,'holes')</code> <span class="syntax_example"><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hpj-2" class="intrnllnk">example</a></span></li><li><code class="synopsis">I2= imfill(I)</code> <span class="syntax_example"><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hpy-1" class="intrnllnk">example</a></span></li><li><code class="synopsis">BW2= imfill(BW,locations,conn)</code></li><li><code class="synopsis">gpuarrayB = imfill(gpuarrayA,<span class="argument_placeholder">___</span>)</code> <span class="syntax_example"><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hqg-1" class="intrnllnk">example</a></span></li></ul></div></div></div><div class="clear"></div><div itemprop="content" class="ref_sect"><span id="buo3g4l-2" class="anchor_target"></span><h2 id="description">Description</h2><div class="descriptions"><div class="description_module"><div class="description_element"><div class="code_responsive"><p><span itemprop="syntax"><code><a href="http://www.mathworks.com/help/images/ref/imfill.html#outputarg_BW2" class="intrnllnk"><code>BW2</code></a> = imfill(<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_BW" class="intrnllnk"><code>BW</code></a>)</code></span> displays
+the binary image <code>BW</code> on the screen and lets you
+define the region to fill by selecting points interactively with the
+mouse. To use this syntax, <code>BW</code> must be a 2-D image.
+Press <b>Backspace</b> or <b>Delete</b> to
+remove the previously selected point. Shift-click, right-click, or
+double-click to select a final point and start the fill operation.
+Press <b>Return</b> to finish the selection without
+adding a point.</p><p>This function supports code generation (see <a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hf7-1" class="intrnllnk">Tips</a>).</p></div></div><div class="description_element"><div class="code_responsive"><p><span itemprop="syntax"><code>[<a href="http://www.mathworks.com/help/images/ref/imfill.html#outputarg_BW2" class="intrnllnk"><code>BW2</code></a>,<a href="http://www.mathworks.com/help/images/ref/imfill.html#outputarg_locations_out" class="intrnllnk"><code>locations_out</code></a>]
+= imfill(<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_BW" class="intrnllnk"><code>BW</code></a>)</code></span> returns the locations
+of points selected interactively in <code>locations_out</code>.
+The return value <code>locations_out</code> is a vector of
+linear indices into the input image. To use this syntax, <code>BW</code> must
+be a 2-D image.</p></div></div><div class="description_element"><p class="syntax_example"><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hpj-1" class="intrnllnk">example</a></p><div class="code_responsive"><p><span itemprop="syntax"><code><a href="http://www.mathworks.com/help/images/ref/imfill.html#outputarg_BW2" class="intrnllnk"><code>BW2</code></a>= imfill(<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_BW" class="intrnllnk"><code>BW</code></a>,<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_locations" class="intrnllnk"><code>locations</code></a>)</code></span> performs
+a flood-fill operation on background pixels of the binary image <code>BW</code>,
+starting from the points specified in <code>locations</code>.
+If <code>locations</code> is a P-by-1 vector, it contains the
+linear indices of the starting locations. If <code>locations</code> is
+a <code>P</code>-by-<code>ndims(BW)</code> matrix, each
+row contains the array indices of one of the starting locations.</p></div></div><div class="description_element"><p class="syntax_example"><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hpj-2" class="intrnllnk">example</a></p><div class="code_responsive"><p><span itemprop="syntax"><code><a href="http://www.mathworks.com/help/images/ref/imfill.html#outputarg_BW2" class="intrnllnk"><code>BW2</code></a>= imfill(<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_BW" class="intrnllnk"><code>BW</code></a>,'holes')</code></span> fills
+holes in the binary image <code>BW</code>. In this syntax, a
+hole is a set of background pixels that cannot be reached by filling
+in the background from the edge of the image.</p></div></div><div class="description_element"><p class="syntax_example"><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hpy-1" class="intrnllnk">example</a></p><div class="code_responsive"><p><span itemprop="syntax"><code><a href="http://www.mathworks.com/help/images/ref/imfill.html#outputarg_I2" class="intrnllnk"><code>I2</code></a>= imfill(<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_I" class="intrnllnk"><code>I</code></a>)</code></span> fills
+holes in the grayscale image <code>I</code>. In this syntax,
+a hole is defined as an area of dark pixels surrounded by lighter
+pixels.</p></div></div><div class="description_element"><div class="code_responsive"><p><span itemprop="syntax"><code><a href="http://www.mathworks.com/help/images/ref/imfill.html#outputarg_BW2" class="intrnllnk"><code>BW2</code></a>= imfill(<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_BW" class="intrnllnk"><code>BW</code></a>,<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_locations" class="intrnllnk"><code>locations</code></a>,<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_conn" class="intrnllnk"><code>conn</code></a>)</code></span> fills
+the area defined by <code>locations</code>, where <code>conn</code> specifies
+the connectivity.</p></div></div><div class="description_element"><p class="syntax_example"><a href="http://www.mathworks.com/help/images/ref/imfill.html#buo3hqg-1" class="intrnllnk">example</a></p><div class="code_responsive"><p><span itemprop="syntax"><code><a href="http://www.mathworks.com/help/images/ref/imfill.html#outputarg_gpuarrayB" class="intrnllnk"><code>gpuarrayB</code></a> = imfill(<a href="http://www.mathworks.com/help/images/ref/imfill.html#inputarg_gpuarrayA" class="intrnllnk"><code>gpuarrayA</code></a>,<span class="argument_placeholder">___</span>)</code></span> performs
+the fill operation on a GPU. The input image and the return image
+are 2-D gpuArrays. Use of this syntax requires Parallel Computing Toolbox™.
+When run on a GPU, <code>imfill</code> does not support interactive
+syntaxes, where you select locations using the mouse.</p></div></div></div></div><div class="clear"></div></div><div itemprop="content" class="ref_sect"><div class="clear"></div><div class="examples"><h2 id="examples">Examples</h2><div class="expandableContent" id="expandableExamples"><p class="switch"><a href="javascript:void(0);" class="expandAllLink" data-allexpanded="true">collapse all</a></p><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="images-ex87745491"><meta itemprop="exampletitle" content="Fill Image from Specified Starting Point"></div><div class="example_module expandableContent" id="example_1"><span id="buo3hpj-1" class="anchor_target"></span><h3 class="expand expanded" id="buo3hpj-1"><span><a style="display:block;" href="javascript:void(0);" title="Expand/Collapse"><span class="example_title">Fill Image from Specified Starting Point</span></a></span></h3><div class="collapse" style="display:block"><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>BW1 = logical([1 0 0 0 0 0 0 0
+               1 1 1 1 1 0 0 0
+               1 0 0 0 1 0 1 0
+               1 0 0 0 1 1 1 0
+               1 1 1 1 0 1 1 1
+               1 0 0 1 1 0 1 0
+               1 0 0 0 1 0 1 0
+               1 0 0 0 1 1 1 0]);
+
+BW2 = imfill(BW1,[3 3],8)
+</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>BW2 =
+
+     1     0     0     0     0     0     0     0
+     1     1     1     1     1     0     0     0
+     1     1     1     1     1     0     1     0
+     1     1     1     1     1     1     1     0
+     1     1     1     1     1     1     1     1
+     1     0     0     1     1     1     1     0
+     1     0     0     0     1     1     1     0
+     1     0     0     0     1     1     1     0
+
+</pre></div></div></div></div></div><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="images-ex96266539"><meta itemprop="exampletitle" content="Fill Holes in a Binary Image"></div><div class="example_module expandableContent" id="example_2"><span id="buo3hpj-2" class="anchor_target"></span><h3 class="expand expanded" id="buo3hpj-2"><span><a style="display:block;" href="javascript:void(0);" title="Expand/Collapse"><span class="example_title">Fill Holes in a Binary Image</span></a></span></h3><div class="collapse" style="display:block"><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>BW4 = im2bw(imread(<span style="color:#A020F0">'coins.png'</span>));
+BW5 = imfill(BW4,<span style="color:#A020F0">'holes'</span>);
+imshow(BW4), figure, imshow(BW5)
+</pre></div></div></div><p>
+<img src="./Fill image regions and holes - MATLAB imfill_files/FillHolesInABinaryImageExample_01.png" alt=""></p><p>
+<img src="./Fill image regions and holes - MATLAB imfill_files/FillHolesInABinaryImageExample_02.png" alt=""></p></div></div><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="images-ex95419749"><meta itemprop="exampletitle" content="Fill Holes in a Grayscale Image"></div><div class="example_module expandableContent" id="example_3"><span id="buo3hpy-1" class="anchor_target"></span><h3 class="expand expanded" id="buo3hpy-1"><span><a style="display:block;" href="javascript:void(0);" title="Expand/Collapse"><span class="example_title">Fill Holes in a Grayscale Image</span></a></span></h3><div class="collapse" style="display:block"><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>I = imread(<span style="color:#A020F0">'tire.tif'</span>);
+I2 = imfill(I,<span style="color:#A020F0">'holes'</span>);
+figure, imshow(I), figure, imshow(I2)
+</pre></div></div></div><p>
+<img src="./Fill image regions and holes - MATLAB imfill_files/FillHolesInAGrayscaleImageExample_01.png" alt=""></p><p>
+<img src="./Fill image regions and holes - MATLAB imfill_files/FillHolesInAGrayscaleImageExample_02.png" alt=""></p></div></div><div class="example_module expandableContent" id="example_4"><span id="buo3hqg-1" class="anchor_target"></span><h3 class="expand expanded" id="buo3hqg-1"><span><a style="display:block;" href="javascript:void(0);" title="Expand/Collapse"><span class="example_title">Fill Operation on a GPU</span></a></span></h3><div class="collapse" style="display:block"><p>Create a simple sample binary image.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>BW1 = logical([1 0 0 0 0 0 0 0
+              1 1 1 1 1 0 0 0
+              1 0 0 0 1 0 1 0
+              1 0 0 0 1 1 1 0
+              1 1 1 1 0 1 1 1
+              1 0 0 1 1 0 1 0
+              1 0 0 0 1 0 1 0
+              1 0 0 0 1 1 1 0])</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>BW1 =
+
+     1     0     0     0     0     0     0     0
+     1     1     1     1     1     0     0     0
+     1     0     0     0     1     0     1     0
+     1     0     0     0     1     1     1     0
+     1     1     1     1     0     1     1     1
+     1     0     0     1     1     0     1     0
+     1     0     0     0     1     0     1     0
+     1     0     0     0     1     1     1     0</pre></div></div></div><p>Create a gpuArray.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>BW1 = gpuArray(BW1);    
+</pre></div></div></div><p>Fill in the background of the image from a specified starting
+location.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>BW2 = imfill(BW1,[3 3],8)</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>BW2 =
+
+     1     0     0     0     0     0     0     0
+     1     1     1     1     1     0     0     0
+     1     1     1     1     1     0     1     0
+     1     1     1     1     1     1     1     0
+     1     1     1     1     1     1     1     1
+     1     0     0     1     1     1     1     0
+     1     0     0     0     1     1     1     0
+     1     0     0     0     1     1     1     0</pre></div></div></div></div></div></div></div></div><div itemprop="content" class="ref_sect"><h2 id="inputs">Input Arguments</h2><div class="expandableContent"><div class="arguments"><div class="input_argument_container"><p class="switch"><a href="javascript:void(0);" class="expandAllLink" data-allexpanded="true">collapse all</a></p><div class="expandableContent"><span id="inputarg_BW" class="anchor_target"></span><h3 id="input_argument_bw" class="expand expanded"><span><a style="display: block;" href="javascript:void(0);" title="Expand/Collapse"><span class="argument_name"><code>BW</code> — Input binary image</span></a><span class="example_desc">real, nonsparse, numeric or logical array</span></span></h3><div class="collapse" style="display:block">
+<p>Input binary image, specified as a real, nonsparse, numeric
+or logical array of any dimension.</p>
+<p class="description_valueexample"><strong>Example: </strong><code>BW = imread('text.png');</code></p>
+<p class="datatypelist"><strong>Data Types: </strong><code>single</code> | <code>double</code> | <code>int8</code> | <code>int16</code> | <code>int32</code> | <code>int64</code> | <code>uint8</code> | <code>uint16</code> | <code>uint32</code> | <code>uint64</code> | <code>logical</code></p></div></div><div class="expandableContent"><span id="inputarg_locations" class="anchor_target"></span><h3 id="input_argument_locations" class="expand expanded"><span><a style="display: block;" href="javascript:void(0);" title="Expand/Collapse"><span class="argument_name"><code>locations</code> — Linear indices identifying pixel locations</span></a><span class="example_desc">2-D, real, numeric vector or matrix of positive integers</span></span></h3><div class="collapse" style="display:block">
+<p>Linear indices identifying pixel locations, specified as a 2-D,
+real, numeric vector or matrix of positive integers.</p>
+<p class="description_valueexample"><strong>Example: </strong><code>BW2 = imfill(BW,[3 3],8);</code></p>
+<p class="datatypelist"><strong>Data Types: </strong><code>double</code></p></div></div><div class="expandableContent"><span id="inputarg_I" class="anchor_target"></span><h3 id="input_argument_i" class="expand expanded"><span><a style="display: block;" href="javascript:void(0);" title="Expand/Collapse"><span class="argument_name"><code>I</code> — Input grayscale image</span></a><span class="example_desc">real, nonsparse numeric array</span></span></h3><div class="collapse" style="display:block">
+<p>Input grayscale image, specified as a real, nonsparse, numeric
+array of any dimension.</p>
+<p class="description_valueexample"><strong>Example: </strong><code>I = imread('cameraman.tif');I2 = imfill(I);</code></p>
+<p class="datatypelist"><strong>Data Types: </strong><code>single</code> | <code>double</code> | <code>int8</code> | <code>int16</code> | <code>int32</code> | <code>int64</code> | <code>uint8</code> | <code>uint16</code> | <code>uint32</code> | <code>uint64</code> | <code>logical</code></p></div></div><div class="expandableContent"><span id="inputarg_conn" class="anchor_target"></span><h3 id="input_argument_conn" class="expand expanded"><span><a style="display: block;" href="javascript:void(0);" title="Expand/Collapse"><span class="argument_name"><code>conn</code> — Connectivity</span></a><span class="example_desc">4 (default) | 8 | 6 | 18 | 26 | 3-by-3-by- ...-by-3 matrix of zeroes and ones</span></span></h3><div class="collapse" style="display:block">
+<p>Connectivity, specified as a one of the scalar values in the
+following table. By default, <code>imfill</code> uses 4-connected
+neighborhoods for 2-D images and 6-connected neighborhoods for 3-D
+inputs. For higher dimensions, <code>imfill</code> uses <code>conndef(ndims(I)),'minimal')</code>.
+Connectivity can be defined in a more general way for any dimension
+by using for <code>conn</code> a 3-by-3-by- ...-by-3 matrix
+of <code>0</code>s and <code>1</code>s. The <code>1</code>-valued
+elements define neighborhood locations relative to the center element
+of <code>conn</code>. Note that <code>conn</code> must
+be symmetric around its center element.</p>
+<div class="table-responsive"><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="34%"><col width="66%"></colgroup><thead><tr valign="top"><th><p>Value</p></th><th><p>Meaning</p></th></tr>
+</thead><tbody><tr valign="top"><td colspan="2"><p><b>Two-dimensional
+connectivities</b></p></td></tr>
+<tr valign="top"><td><p><span id="buo3hbf-1" class="anchor_target"></span>4</p></td><td><p>4-connected neighborhood</p></td></tr>
+<tr valign="top"><td><p><span id="buo3hbf-2" class="anchor_target"></span>8</p></td><td><p>8-connected neighborhood</p></td></tr>
+<tr valign="top"><td colspan="2"><p><b>Three-dimensional
+connectivities</b></p></td></tr>
+<tr valign="top"><td><p><span id="buo3hbf-3" class="anchor_target"></span>6</p></td><td><p>6-connected neighborhood</p></td></tr>
+<tr valign="top"><td><p><span id="buo3hbf-4" class="anchor_target"></span>18</p></td><td><p>18-connected neighborhood</p></td></tr>
+<tr valign="top"><td><p><span id="buo3hbf-5" class="anchor_target"></span>26</p></td><td><p>26-connected neighborhood</p></td></tr>
+</tbody></table></div><p></p>
+<p class="description_valueexample"><strong>Example: </strong></p><p class="datatypelist"><strong>Data Types: </strong><code>single</code> | <code>double</code> | <code>int8</code> | <code>int16</code> | <code>int32</code> | <code>int64</code> | <code>uint8</code> | <code>uint16</code> | <code>uint32</code> | <code>uint64</code></p></div></div><div class="expandableContent"><span id="inputarg_gpuarrayA" class="anchor_target"></span><h3 id="input_argument_gpuarraya" class="expand expanded"><span><a style="display: block;" href="javascript:void(0);" title="Expand/Collapse"><span class="argument_name"><code>gpuarrayA</code> — Input image</span></a><span class="example_desc">gpuArray</span></span></h3><div class="collapse" style="display:block">
+<p>Input image, specified as a gpuArray.</p>
+</div></div></div></div></div></div><div itemprop="content" class="ref_sect"><h2 id="zmw57dd0e41776">Output Arguments</h2><div class="expandableContent"><div class="arguments"><div class="output_argument_container"><p class="switch"><a href="javascript:void(0);" class="expandAllLink" data-allexpanded="true">collapse all</a></p><div class="expandableContent"><span id="outputarg_BW2" class="anchor_target"></span><h3 id="output_argument_bw2" class="expand expanded"><span><a style="display: block;" href="javascript:void(0);" title="Expand/Collapse"><span class="argument_name"><code>BW2</code> — Filled image</span></a><span class="example_desc">logical array</span></span></h3><div class="collapse" style="display:block">
+<p>Filled image, returned as a logical array.</p>
+</div></div><div class="expandableContent"><span id="outputarg_locations_out" class="anchor_target"></span><h3 id="output_argument_locations_out" class="expand expanded"><span><a style="display: block;" href="javascript:void(0);" title="Expand/Collapse"><span class="argument_name"><code>locations_out</code> — Linear indices of pixel locations</span></a><span class="example_desc">numeric vector or matrix</span></span></h3><div class="collapse" style="display:block">
+<p>Linear indices of pixel locations, returned as a numeric vector
+or matrix.</p>
+</div></div><div class="expandableContent"><span id="outputarg_I2" class="anchor_target"></span><h3 id="output_argument_i2" class="expand expanded"><span><a style="display: block;" href="javascript:void(0);" title="Expand/Collapse"><span class="argument_name"><code>I2</code> — Filled grayscale image</span></a><span class="example_desc">numeric array</span></span></h3><div class="collapse" style="display:block">
+<p>Filled grayscale image, returned as a numeric array.</p>
+</div></div><div class="expandableContent"><span id="outputarg_gpuarrayB" class="anchor_target"></span><h3 id="output_argument_gpuarrayb" class="expand expanded"><span><a style="display: block;" href="javascript:void(0);" title="Expand/Collapse"><span class="argument_name"><code>gpuarrayB</code> — Output image</span></a><span class="example_desc">gpuArray</span></span></h3><div class="collapse" style="display:block">
+<p>Output image, returned as a gpuArray.</p>
+</div></div></div></div></div></div><div class="clear"></div><div class="moreabout ref_sect"><h2 id="moreabout">More About</h2><div class="expandableContent"><p class="switch"><a href="javascript:void(0);" class="expandAllLink" data-allexpanded="true">collapse all</a></p><div class="expandableContent" itemprop="content"><span id="buo3hf7-1" class="anchor_target"></span><h3 class="expand expanded" id="buo3hf7-1"><span><a style="display:block;" href="javascript:void(0);" title="Expand/Collapse"><span>Tips</span></a></span></h3><div class="collapse" style="display:block"><ul type="disc"><li><p>This function supports the generation of C code using <span>MATLAB<sup>®</sup> Coder™</span>.
+Note that if you choose the generic <code>MATLAB Host Computer</code> target
+platform, the function generates code that uses a precompiled, platform-specific
+shared library. Use of a shared library preserves performance optimizations
+but limits the target platforms for which code can be generated. For
+more information, see <a href="http://www.mathworks.com/help/images/understanding-code-generation-with-image-processing-toolbox.html">Understanding Code Generation with Image Processing Toolbox</a>.</p><p>When generating code, note the following:</p><ul type="circle"><li><p>The optional input arguments, <code>conn</code> and <code>'holes'</code> must
+be a compile-time constants.</p></li><li><p><code>imfill</code> supports up to 3-D inputs
+only. (No N-D support.)</p></li><li><p>The interactive syntax to select points, <code>imfill(BW,0,CONN)</code> is
+not supported. </p></li><li><p>With the <code>locations</code> input argument,
+once you select a format at compile time, you cannot change it at
+run time. However, the number of points in locations can be varied
+at run time.</p></li></ul></li></ul></div></div><div class="expandableContent" itemprop="content"><span id="buo3hh9-1" class="anchor_target"></span><h3 class="expand expanded" id="buo3hh9-1"><span><a style="display:block;" href="javascript:void(0);" title="Expand/Collapse"><span>Algorithms</span></a></span></h3><div class="collapse" style="display:block"><p><code>imfill</code> uses an algorithm based on morphological
+reconstruction <a href="http://www.mathworks.com/help/images/ref/imfill.html#bup36av-2" class="intrnllnk">[1]</a>.</p></div></div></div></div><div itemprop="content" class="ref_sect"><div class="bibliography"><h2 id="References"><span id="bup36av-1" class="anchor_target"></span>References</h2><span id="bup36av-2" class="anchor_target"></span><div id="BIBLIO.bup36av-2" class="bibliomixed"><p>[1] Soille, P., <i>Morphological Image
+Analysis: Principles and Applications</i>,  Springer-Verlag,
+1999, pp. 173-174.</p></div></div></div><div class="ref_sect">
+<h2 id="zmw57dd0e42028">See Also</h2><p><span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="http://www.mathworks.com/help/images/ref/bwselect.html"><span itemprop="name"><code>bwselect</code></span></a></span> | <span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="http://www.mathworks.com/help/images/ref/conndef.html"><span itemprop="name"><code>conndef</code></span></a></span> | <span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="http://www.mathworks.com/help/images/ref/imreconstruct.html"><span itemprop="name"><code>imreconstruct</code></span></a></span> | <span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="http://www.mathworks.com/help/images/ref/regionfill.html"><span itemprop="name"><code>regionfill</code></span></a></span></p>
+
+
+
+</div>
+</div></div></section>
+<div class="feedbackblock">Was this topic helpful?
+<input type="button" value="Yes" onclick="openFeedbackWindow(&#39;http://www.mathworks.com/programs/bounce_hub_help.html?s_cid=Help_Topic_Survey&amp;surveyParams=&#39;+document.location.href+&#39;-YES-R2015a&#39;);">
+<input type="button" value="No" onclick="openFeedbackWindow(&#39;http://www.mathworks.com/programs/bounce_hub_help.html?s_cid=Help_Topic_Survey&amp;surveyParams=&#39;+document.location.href+&#39;-NO-R2015a&#39;);">
+</div>
+<!--Last updated: Thu Feb 26 21:37:22 EST 2015-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE CTA - Begin -->
+    <div class="cta_container_mobile visible-xs">
+      <div class="container-fluid">      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="cta_box">
+<ul class="list-unstyled list-inline">
+<li class="cta_item cta_item_general"><a href="http://www.mathworks.com/programs/bounce/doc_tryit.html" class="icon-download">Trial Software</a></li>
+<li class="cta_item cta_item_general"><a href="http://www.mathworks.com/support/web_downloads_bounce.html?s_cid=1008_degr_docdn_270055" class="icon-download">Product Updates</a></li>
+</ul>
+</div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MOBILE CTA - End -->
+
+        <!-- BODY TRAIL - Begin -->
+        <div class="body_trail_container">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="row"><div class="col-xs-12 col-sm-3"><h5><a href="http://www.mathworks.com/help/images/index.html">Image Processing Toolbox Documentation</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="http://www.mathworks.com/help/images/getting-started-with-image-processing-toolbox.html?s_cid=doc_ftr">Getting Started</a></li>
+<li><a href="http://www.mathworks.com/help/images/examples.html?s_cid=doc_ftr">Examples</a></li>
+<li><a href="http://www.mathworks.com/help/images/functionlist.html?s_cid=doc_ftr">Functions and Other Reference</a></li>
+<li><a href="http://www.mathworks.com/help/images/release-notes.html?s_cid=doc_ftr">Release Notes</a></li>
+<li><a href="http://www.mathworks.com/help/releases/R2015a/pdf_doc/images/index.html?s_cid=doc_ftr">PDF Documentation</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-3"><h5><a href="http://www.mathworks.com/help/index.html">Other Documentation</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="http://www.mathworks.com/help/matlab/index.html">MATLAB</a></li><li><a href="http://www.mathworks.com/help/vision/index.html">Computer Vision System Toolbox</a></li><li><a href="http://www.mathworks.com/help/signal/index.html">Signal Processing Toolbox</a></li><li><a href="http://www.mathworks.com/help/stats/index.html">Statistics and Machine Learning Toolbox</a></li><li><a href="http://www.mathworks.com/help/symbolic/index.html">Symbolic Math Toolbox</a></li><li><a href="http://www.mathworks.com/help/index.html">All Products</a></li></ul>
+</div>
+<div class="col-xs-12 col-sm-3"><h5><a href="http://www.mathworks.com/support">Support</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="http://www.mathworks.com/matlabcentral/answers">MATLAB Answers</a></li><li><a href="http://www.mathworks.com/support/install-matlab.html">Installation Help</a></li><li><a href="http://www.mathworks.com/support/bugreports">Bug Reports</a></li><li><a href="http://www.mathworks.com/products/availability">Product Requirements</a></li><li><a href="http://www.mathworks.com/download">Software Downloads</a></li></ul>
+</div>
+<div class="col-xs-12 col-sm-3">
+<div class="panel panel_color_transparent panel_color_fill">
+<div class="panel-body"> <img src="./Fill image regions and holes - MATLAB imfill_files/bg-trial-arrow_02.png" class="add_margin_5">
+<h4>Try MATLAB, Simulink, and Other Products</h4>
+<a href="http://www.mathworks.com/programs/trials/trial_request.html?prodcode=IP&s_iid=doc_trial_IP_footer" class="icon-chevron">Get trial now </a>
+</div>
+</div>
+</div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BODY TRAIL - End -->
+
+    <footer id="footer" class="bs-footer">
+        <!-- FAT FOOTER - Begin --> 
+        <div class="container-fluid">
+          <div class="fat_footer_container">
+            <div class="execmatlabproduct">
+<p class="copyright">© 1994-2015 The MathWorks, Inc.</p>
+<ul class="footernav">
+<li class="footernav_acknowledgments"><a href="matlab:web([docroot '/acknowledgments.html'])">Acknowledgments</a></li>
+<li class="footernav_trademarks"><a href="matlab:web([matlabroot '/trademarks.txt'])">Trademarks</a></li>
+<li class="footernav_patents"><a href="matlab:web([matlabroot '/patents.txt'])">Patents</a></li>
+<li class="footernav_terms"><a href="matlab:web(matlab.internal.licenseAgreement)">Terms of Use</a></li>
+</ul>
+</div>
+          </div>
+        </div>
+        <!-- FAT FOOTER - End -->
+      <div class="container-fluid">
+       <div class="footer">
+<div class="row">
+<div class="col-xs-12 col-lg-9">
+<p class="copyright">© 1994-2015 The MathWorks, Inc.</p>
+<ul class="footernav">
+<li class="footernav_country">
+<a href="javascript:void(0);" data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="&lt;small&gt;&lt;div class=&#39;row&#39;&gt;&lt;div class=&#39;col-xs-12 col-sm-6&#39;&gt;&lt;ul class=&#39;list-unstyled&#39;&gt;&lt;li&gt;&lt;a href=&#39;http://www.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;United States&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://www.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Canada&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://au.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Australia&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://de.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Österreich&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://nl.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Belgium&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://cn.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;中国&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://se.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Denmark&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://se.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Finland&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://fr.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;France&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://de.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Deutschland&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://in.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;India&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://uk.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Ireland&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://it.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Italia&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&#39;col-xs-12 col-sm-6&#39;&gt;&lt;ul class=&#39;list-unstyled&#39;&gt;&lt;li&gt;&lt;a href=&#39;http://jp.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;日本&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://kr.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;한국&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://nl.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Luxembourg&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://nl.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Netherlands&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://au.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;New Zealand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://se.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Norway&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://www.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Portugal&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://es.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;España&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://se.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Sweden&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://ch.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Schweiz / Suisse&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://uk.mathworks.com/help/images/ref/imfill.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;United Kingdom&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://www.mathworks.com/company/worldwide/?s_tid=gn_loc_drop&#39;&gt;All Other Countries&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/small&gt;&lt;/ul&gt;" data-original-title="" title="">
+<span class="icon-globe"></span>
+United States
+<!-- <b class="caret"></b> -->
+</a>
+<script>
+$('.footernav_country a').popover();
+</script>
+</li>
+<li class="footernav_help"><a href="http://www.mathworks.com/help.html">Site Help</a></li>
+<li class="footernav_patents"><a href="http://www.mathworks.com/company/aboutus/policies_statements/patents.html">Patents</a></li>
+<li class="footernav_trademarks"><a href="http://www.mathworks.com/company/aboutus/policies_statements/trademarks.html">Trademarks</a></li>
+<li class="footernav_privacy"><a href="http://www.mathworks.com/company/aboutus/policies_statements/">Privacy Policy</a></li>
+<li class="footernav_piracy"><a href="http://www.mathworks.com/company/aboutus/policies_statements/piracy.html">Preventing Piracy</a></li>
+</ul>
+</div>
+<div class="clearfix visible-sm add_margin_30"></div>
+<div class="col-xs-12 col-lg-3">
+<div class="social_media">
+<ul class="social_media_icons">
+<li>
+<a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=http://www.facebook.com/MATLAB" target="_blank" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-facebook.svg" alt="Facebook" class="ico_facebook" type="image/svg+xml">
+<span class="ico_facebook ico_sm"></span>
+</object>
+</a>
+</li>
+<li>
+<a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_twt&url=http://www.twitter.com/MATLAB" target="_blank" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-twitter.svg" alt="Twitter" class="ico_twitter" type="image/svg+xml">
+<span class="ico_twitter ico_sm"></span>
+</object>
+</a>
+</li>
+<li>
+<a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_glg&url=https://plus.google.com/117177960465154322866?prsrc=3" target="_blank" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-google-plus.svg" alt="Google+" class="ico_google" type="image/svg+xml">
+<span class="ico_google ico_sm"></span>
+</object>
+</a>
+</li>
+<li>
+<a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_lkd&url=http://www.linkedin.com/company/the-mathworks_2" target="_blank" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-linkedin.svg" alt="LinkedIn" class="ico_linkedin" type="image/svg+xml">
+<span class="ico_linkedin ico_sm"></span>
+</object>
+</a>
+</li>
+<li>
+<a href="http://www.mathworks.com/company/rss/index.html" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-rss.svg" alt="RSS" class="ico_rss" type="image/svg+xml">
+<span class="ico_rss ico_sm"></span>
+</object>
+</a>
+</li>
+</ul>
+<div class="clearfix"></div>
+<p><em>Join the conversation</em></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quantcast Tag -->
+<script>
+(function(){
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/aquant.js?a=p-zfNtLVVEHXE-1";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem,scpt);
+}());
+var smarttagdata={qacct: 'p-zfNtLVVEHXE-1',
+orderid: '',
+revenue: '',
+};
+</script>
+<noscript>
+&lt;img src="//pixel.quantserve.com/pixel/p-zfNtLVVEHXE-1.gif?labels=_fp.event.Default;" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/&gt;
+</noscript>
+<!-- End Quantcast tag -->
+<!-- BEGIN Google Code for UK and .COM Domains-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1023777138;
+var google_conversion_label = "SVIBCMq3xwIQ8rKW6AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/conversion.js">
+</script><iframe name="google_conversion_frame" title="Google conversion frame" width="0" height="0" src="about:blank" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 300px 13px;">&lt;img height="1" width="1" border="0" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1023777138/?frame=0&amp;random=1428325276615&amp;cv=7&amp;fst=1428325276615&amp;num=1&amp;fmt=1&amp;label=SVIBCMq3xwIQ8rKW6AM&amp;guid=ON&amp;u_h=900&amp;u_w=1600&amp;u_ah=900&amp;u_aw=1600&amp;u_cd=24&amp;u_his=1&amp;u_tz=-240&amp;u_java=true&amp;u_nplug=17&amp;u_nmime=30&amp;frm=0&amp;url=http%3A//www.mathworks.com/help/images/ref/imfill.html&amp;ref=https%3A//www.google.com/&amp;vis=1" /&gt;</iframe>
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1023777138/?value=0&amp;label=SVIBCMq3xwIQ8rKW6AM&amp;guid=ON&amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+<!-- END Google Code for UK and .COM Domains-->
+<!-- BEGIN Adobe DTM -->
+<script type="text/javascript">
+try {
+_satellite.pageBottom();
+} catch (e) {
+//something went wrong
+}
+</script>
+<!-- END Adobe DTM -->
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="./Fill image regions and holes - MATLAB imfill_files/s_code.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+if (typeof mboxLoadSCPlugin == 'function') {
+mboxLoadSCPlugin(s);
+}
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->
+<!-- BEGIN Qualaroo -->
+<script type="text/javascript">
+var _kiq = _kiq || [];
+(function(){
+setTimeout(function(){
+var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+s.async = true; s.src = '//s3.amazonaws.com/ki.js/49559/ahy.js'; f.parentNode.insertBefore(s, f);
+}, 1);
+})();
+</script>
+<!-- END Qualaroo -->
+      </div>
+    </footer>
+
+  </div><script src="./Fill image regions and holes - MATLAB imfill_files/standard"></script>
+
+
+
+<a class="btn btn_primary" id="go-top"><span class="icon-arrow-open-up icon_24"></span></a></body></html>

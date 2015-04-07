@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://www.mathworks.com/help/images/ref/strel.html -->
+<html class="wf-museoslab-n7-active wf-futurapt-n4-active wf-futurapt-i4-active wf-futurapt-n5-active wf-futurapt-i5-active wf-futurapt-n7-active wf-futurapt-i7-active wf-automate-n7-active wf-minionprosubhead-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Create morphological structuring element (STREL) - MATLAB strel</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="./Create morphological structuring element (STREL) - MATLAB strel_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="./Create morphological structuring element (STREL) - MATLAB strel_files/site6.css" rel="stylesheet" type="text/css">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_lg.css?20150306" rel="stylesheet" media="screen and (min-width: 1200px)">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_md.css?20150306" rel="stylesheet" media="screen and (min-width: 992px) and (max-width: 1199px)">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_sm+xs.css?20150306" rel="stylesheet" media="screen and (max-width: 991px)">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_sm.css?20150306" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)">
+<link href="http://www.mathworks.com/includes_content/responsive/css/site6_xs.css?20150306" rel="stylesheet" media="screen and (max-width: 767px)">
+<!--[if IE 8]>
+<link href="/includes_content/responsive/css/site6_ie8.css?20150306" rel="stylesheet" type="text/css">
+<script src="/includes_content/responsive/scripts/bootstrap/html5shiv-printshiv.js"></script>
+<script src="/includes_content/responsive/scripts/bootstrap/respond.min.js"></script>
+<script src="/includes_content/responsive/scripts/bootstrap/placeholders.min.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<link href="/includes_content/responsive/css/site6_ie9.css?20150306" rel="stylesheet" type="text/css">
+<script src="/includes_content/responsive/scripts/bootstrap/placeholders.min.js"></script>
+<![endif]-->
+<link href="./Create morphological structuring element (STREL) - MATLAB strel_files/site6_offcanvas.css" rel="stylesheet" type="text/css">
+<!--[if IE 8]>
+<link href="/includes_content/responsive/css/site6_offcanvas_ie8.css?20150306" rel="stylesheet" type="text/css">
+<script src="/includes_content/responsive/scripts/bootstrap/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" async="" src="./Create morphological structuring element (STREL) - MATLAB strel_files/ahy.js"></script><script src="./Create morphological structuring element (STREL) - MATLAB strel_files/aquant.js" async="" type="text/javascript"></script><script src="./Create morphological structuring element (STREL) - MATLAB strel_files/jquery-latest.js"></script>
+<script src="./Create morphological structuring element (STREL) - MATLAB strel_files/jquery.mobile.custom.min.js"></script>
+<script src="./Create morphological structuring element (STREL) - MATLAB strel_files/bootstrap.min.js"></script>
+<script src="./Create morphological structuring element (STREL) - MATLAB strel_files/global.js"></script>
+<script src="./Create morphological structuring element (STREL) - MATLAB strel_files/xvy5baa.js"></script><style type="text/css"></style>
+<style type="text/css">.tk-museo-slab{font-family:"museo-slab",serif;}.tk-futura-pt{font-family:"futura-pt","Arial","Helvetica",sans-serif;}.tk-automate{font-family:"automate",sans-serif;}.tk-minion-pro-subhead{font-family:"minion-pro-subhead",serif;}</style><link rel="stylesheet" href="http://fonts.mathworks.com/k/xvy5baa-d.css?3bb2a6e53c9684ffdc9a99f11f5b2a6259e9e580e4938fcb487bcb48ad765cb4c66326ede94ac48d6ede67e4500a24e97a0591ac31cb9a79f653770995b73fcab179c8843e167d4d294efffce20684477e3030043617caba214c58b6f154839e39f8538e92cdd7798839d1a59e4d2b0791bbe6e783a84640f50c6e8f631ac5fd6e2928747046e8d3c8014f4e612066d47cd2f6460236d5af8067bf5be13b5d402fc9b57daa008f4648c576b0daffc4a09719f26748e4d12162f1841b44cd6114f823631817018292249f9424158262729aedfc9a7eaad686e19704ecf794505a5bf58346b86674958b71b58f71e596df71adc85eb06870a8aa3fa53e996a1fc9a87139ba5f47c506b20f3f5af733a35e32b903f3ea3ad28c5600e222fef219fa6d117c0d627897884abcb24d233482306c08ad5732c7ff2a2566cd5fa9554fc45a683e4492630af7837ac201efe374b4410a1ebb0f78147daed230fd70b646914a1bf60c1e5586d424a9779647a2ccd561f26b04a124f9"><script>try{Typekit.load();}catch(e){}</script>
+<!-- BEGIN Adobe DTM -->
+<script src="./Create morphological structuring element (STREL) - MATLAB strel_files/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js"></script><script src="./Create morphological structuring element (STREL) - MATLAB strel_files/mbox-contents-95c6a4d9c82a8d20476522984666120b54192e9b.js"></script><style>.mboxDefault { visibility:hidden; }</style>
+<!-- END Adobe DTM -->
+<link href="./Create morphological structuring element (STREL) - MATLAB strel_files/doc_center.css" rel="stylesheet" type="text/css">
+<!--[if IE 8]>
+<link href="/includes_content/releases/R2015a/css/doc_center_ie8.css?20150306" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 9]>
+<link href="/includes_content/releases/R2015a/css/doc_center_ie9.css?20150306" rel="stylesheet" type="text/css">
+<![endif]-->
+<link href="./Create morphological structuring element (STREL) - MATLAB strel_files/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script src="./Create morphological structuring element (STREL) - MATLAB strel_files/doc_scrollspy.js"></script>
+<link rel="stylesheet" href="./Create morphological structuring element (STREL) - MATLAB strel_files/docstyle.css" type="text/css">
+<meta name="chunktype" content="refpage">
+<meta name="refentity" itemprop="refentity" content="function:strel">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="fcn">
+<meta name="infotype" itemprop="infotype" content="ref/function">
+<meta name="description" itemprop="description" content="This MATLAB function creates a structuring element, SE, of the type specified by shape.">
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/l10n.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/docscripts.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/mw.toc.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/mw.imagescaling.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/mw.imageanimation.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/jquery.highlight.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/nanoscroller.min.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/doc_omniture.js"></script>
+<!-- Additions/overrides from the doc side -->
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/docsearch.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/jquery.toggleval.js"></script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/MathRenderer.js"></script><style type="text/css">math { visibility: hidden; }</style><link type="text/css" rel="stylesheet" href="./Create morphological structuring element (STREL) - MATLAB strel_files/main.css"><script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/dojo.js"></script>
+<style type="text/css" id="ki-tz7-te"></style><style type="text/css" id="ki-tz7-t8"></style></head>
+  
+<body id="responsive_offcanvas" class="no_animate">
+
+  <!-- Mobile TopNav: Start -->
+<div class="header visible-xs visible-sm" id="header_mobile">
+<nav class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle topnav_toggle" data-toggle="collapse" data-target="#topnav_collapse">
+<span class="sr-only">Toggle Main Navigation</span>
+<span class="icon-menu"></span>
+</button>
+<a href="http://www.mathworks.com/index.html?s_tid=gn_logo" class="svg_link navbar-brand">
+<object data="http://www.mathworks.com/images/responsive/global/pic-header-mathworks-logo.svg" alt="MathWorks" class="mw_logo" type="image/svg+xml">
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/pic-header-mathworks-logo.png" class="mw_logo" alt="MathWorks">
+</object>
+</a>
+</div>
+</div>
+</div>
+<div class="row visible-xs visible-sm">
+<div class="col-xs-12">
+<div class="navbar-collapse collapse" id="topnav_collapse">
+<ul class="nav navbar-nav" id="topnav">
+<li class="topnav_products "><a href="http://www.mathworks.com/products/?s_tid=gn_ps">Products</a></li>
+<li class="topnav_solutions "><a href="http://www.mathworks.com/solutions/?s_tid=gn_sol">Solutions</a></li>
+<li class="topnav_academia "><a href="http://www.mathworks.com/academia/?s_tid=gn_acad">Academia</a></li>
+<li class="topnav_support "><a href="http://www.mathworks.com/support/?s_tid=gn_supp">Support</a></li>
+<li class="topnav_community "><a href="http://www.mathworks.com/matlabcentral/?s_tid=gn_mlc">User Community</a></li>
+<li class="topnav_events "><a href="http://www.mathworks.com/company/events/?s_tid=gn_ev">Events</a></li>
+<li class="topnav_company "><a href="http://www.mathworks.com/company/?s_tid=gn_co">Company</a></li>
+<li class="headernav_contact"><a href="http://www.mathworks.com/company/aboutus/contact_us/?s_tid=gn_cntus">Contact Us</a></li>
+<li class="headernav_store"><a href="http://www.mathworks.com/store/default.do?s_cid=store_top_nav&s_tid=gn_store">How To Buy</a></li>
+<li class="headernav_login dropdown">
+<a href="http://www.mathworks.com/help/images/ref/strel.html#" class="dropdown-toggle" data-toggle="dropdown">
+Log In
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu" id="mwa-nav">
+<li class="mwa-nav_logout"><a id="mwa-log_in" href="https://www.mathworks.com/accesslogin/login.do?uri=http://www.mathworks.com/help/images/ref/strel.html">Log In</a></li>
+<li class="mwa-nav_account"><a id="mwa-create_account" href="https://www.mathworks.com/accesslogin/createProfile.do?uri=http://www.mathworks.com/help/images/ref/strel.html">Create Account</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<!-- Mobile TopNav: End -->
+<!-- Conjoined Header: Start -->
+<div class="sticky_header_container affix">
+<!-- Desktop TopNav: Start -->
+<div class="header hidden-xs hidden-sm" id="header_desktop">
+<nav class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+<div class="collapse navbar-collapse" id="headernav_collapse">
+<ul class="nav navbar-nav navbar-right" id="headernav">
+<li class="headernav_contact"><a href="http://www.mathworks.com/company/aboutus/contact_us/?s_tid=gn_cntus">Contact Us</a></li>
+<li class="headernav_store"><a href="http://www.mathworks.com/store/default.do?s_cid=store_top_nav&s_tid=gn_store">How To Buy</a></li>
+<li class="headernav_login dropdown">
+<a href="http://www.mathworks.com/help/images/ref/strel.html#" class="dropdown-toggle" data-toggle="dropdown">
+Log In
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu" id="mwa-nav">
+<li class="mwa-nav_logout"><a id="mwa-log_in" href="https://www.mathworks.com/accesslogin/login.do?uri=http://www.mathworks.com/help/images/ref/strel.html">Log In</a></li>
+<li class="mwa-nav_account"><a id="mwa-create_account" href="https://www.mathworks.com/accesslogin/createProfile.do?uri=http://www.mathworks.com/help/images/ref/strel.html">Create Account</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="navbar-header">
+<div class="logo_container hidden-xs hidden-sm">
+<a href="http://www.mathworks.com/index.html?s_tid=gn_logo" class="svg_link pull-left">
+<object data="http://www.mathworks.com/images/responsive/global/pic-header-mathworks-logo.svg" alt="MathWorks" class="mw_logo" type="image/svg+xml">
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/pic-header-mathworks-logo.png" alt="MathWorks">
+</object>
+</a>
+</div>
+<div class="navbar-collapse collapse hidden-xs hidden-sm">
+<ul class="nav navbar-nav" id="topnav">
+<li class="topnav_products "><a href="http://www.mathworks.com/products/?s_tid=gn_ps">Products</a></li>
+<li class="topnav_solutions "><a href="http://www.mathworks.com/solutions/?s_tid=gn_sol">Solutions</a></li>
+<li class="topnav_academia "><a href="http://www.mathworks.com/academia/?s_tid=gn_acad">Academia</a></li>
+<li class="topnav_support "><a href="http://www.mathworks.com/support/?s_tid=gn_supp">Support</a></li>
+<li class="topnav_community "><a href="http://www.mathworks.com/matlabcentral/?s_tid=gn_mlc">User Community</a></li>
+<li class="topnav_events "><a href="http://www.mathworks.com/company/events/?s_tid=gn_ev">Events</a></li>
+<li class="topnav_company "><a href="http://www.mathworks.com/company/?s_tid=gn_co">Company</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<!-- Desktop TopNav: End -->
+<!-- Section Header: Start -->
+<div class="section_header level_3">
+<div class="container-fluid">
+<div class="row" id="mobile_search_row">
+<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7" id="mobile_search">
+<div class="search_nested_content_container">
+<div id="search_scope_doc" class="collapse in">
+<form id="docsearch_form" name="docsearch_form" method="get" data-release="R2015a" data-language="en" action="http://www.mathworks.com/help/search.html">
+<div class="input-group tokenized_search_field">
+<label class="sr-only">Search MATLAB Documentation</label>
+<input type="text" class="form-control conjoined_search" autocomplete="off" name="qdoc" placeholder="Search R2015a Documentation" id="docsearch">
+<div class="input-group-btn">
+<button type="button" class="btn btn_search_adjacent dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span><span class="search_scope_label">Documentation</span></button>
+<ul class="dropdown-menu list-unstyled dropdown-menu-right" role="menu">
+<!-- <li data-toggle="collapse" data-target="#search_scope_doc"><a href="#">Documentation</a></li> -->
+<li data-toggle="collapse" data-target="#search_scope_support" class="doc_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/strel.html#">Support</a></li>
+<li data-toggle="collapse" data-target="#search_scope_site" class="doc_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/strel.html#">MathWorks</a></li>
+</ul>
+<script>
+$(".doc_search_scope_trigger").click(function() {
+$("#search_scope_doc").removeClass("in");
+});
+</script>
+<button type="submit" name="submitsearch" id="submitsearch" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1" disabled=""></button>
+</div>
+</div>
+</form>
+</div>
+<div id="search_scope_support" class="collapse">
+<form id="support_search" action="http://www.mathworks.com/support/search_results.html" method="get" accept-charset="utf-8">
+<div class="input-group">
+<label class="sr-only">Search All Support Resources</label>
+<input id="suggestion" type="hidden" name="suggestion" value="">
+<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+<input id="search" class="form-control conjoined_search" type="text" name="q" placeholder="Search All Support Resources" autocomplete="off">
+<div class="input-group-btn">
+<button type="button" class="btn btn_search_adjacent dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span><span class="search_scope_label">Support</span></button>
+<ul class="dropdown-menu list-unstyled dropdown-menu-right" role="menu">
+<li data-toggle="collapse" data-target="#search_scope_doc" class="support_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/strel.html#">Documentation</a></li>
+<!--<li data-toggle="collapse" data-target="#search_scope_support"><a href="#">Support</a></li>-->
+<li data-toggle="collapse" data-target="#search_scope_site" class="support_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/strel.html#">MathWorks</a></li>
+</ul>
+<script>
+$(".support_search_scope_trigger").click(function() {
+$("#search_scope_support").removeClass("in");
+});
+</script>
+<button type="submit" name="submitsearch" id="support_submitsearch" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+</div>
+</div>
+</form>
+</div>
+<div id="search_scope_site" class="collapse">
+<form name="search" id="site_search" class="site_search" action="http://www.mathworks.com/searchresults/" method="get">
+<div class="input-group">
+<label class="sr-only">Search MathWorks.com</label>
+<input type="hidden" name="c[]" value="entire_site_en">
+<input type="text" name="q" id="query" class="form-control conjoined_search" placeholder="Search MathWorks.com" autocomplete="off" \="">
+<div class="input-group-btn">
+<button type="button" class="btn btn_search_adjacent dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span><span class="search_scope_label">MathWorks</span></button>
+<ul class="dropdown-menu list-unstyled dropdown-menu-right" role="menu">
+<li data-toggle="collapse" data-target="#search_scope_doc" class="site_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/strel.html#">Documentation</a></li>
+<li data-toggle="collapse" data-target="#search_scope_support" class="site_search_scope_trigger"><a href="http://www.mathworks.com/help/images/ref/strel.html#">Support</a></li>
+<!--<li data-toggle="collapse" data-target="#search_scope_site" class="support_search_scope_trigger"><a href="#">MathWorks</a></li>-->
+</ul>
+<script>
+$(".site_search_scope_trigger").click(function() {
+$("#search_scope_site").removeClass("in");
+});
+</script>
+<button type="submit" id="searchbutton" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<button class="btn icon-remove btn_search pull-right icon_32 visible-xs" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+</div>
+<div class="col-xs-9 col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5">
+<div class="section_header_content">
+<h1>Documentation</h1>
+</div>
+</div>
+<div class="col-xs-3 visible-xs">
+<button class="btn icon-search btn_search pull-right icon_16" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+</div>
+</div>
+<script>
+$(".section_header h1").click(function(){
+$(window.location).attr('href', '/help');
+});
+</script>
+<!-- Section Header: End -->
+<!-- Mobile Local Nav: Start -->
+<!-- Mobile Local Nav: End -->
+</div>
+</div>
+<!-- Horo Nav: Start -->
+<div class="horizontal_nav_container">
+<div class="offcanvas_actuator active" data-toggle="offcanvas" data-target="#sidebar" id="nav_toggle">
+<button type="button" class="btn">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-menu icon_32"></span>
+</button>
+<span class="offcanvas_actuator_label"></span>
+<span class="offcanvas_actuator_close"></span>
+</div>
+<div class="offcanvas_horizontal_nav">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-12 hidden-xs">
+<div class="cta_box">
+<ul class="list-unstyled list-inline">
+<li class="cta_item cta_item_general"><a href="http://www.mathworks.com/programs/bounce/doc_tryit.html" class="icon-download">Trial Software</a></li>
+<li class="cta_item cta_item_general"><a href="http://www.mathworks.com/support/web_downloads_bounce.html?s_cid=1008_degr_docdn_270055" class="icon-download">Product Updates</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Horo Nav: End -->
+</div>
+<!-- Conjoined Header: End -->
+
+  <div class="row-offcanvas row-offcanvas-left active">
+    <div class="sidebar-offcanvas" id="sidebar" role="navigation">
+      <nav class="offcanvas_nav" role="navigation">
+          <ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_breadcrumb">
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="http://www.mathworks.com/help/index.html" itemprop="url"><span itemprop="title">All Products</span></a></li>
+</ul>
+
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_disambiguation">
+<li class="product"><a href="http://www.mathworks.com/help/images/index.html">Image Processing Toolbox</a>
+<div class="dropdown">
+<span class="icon-arrow-down icon_16" id="dropdownMenu1" data-toggle="dropdown"></span>
+<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/images/getting-started-with-image-processing-toolbox.html?s_cid=doc_flyout">Getting Started</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/images/examples.html?s_cid=doc_flyout">Examples</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/images/functionlist.html?s_cid=doc_flyout">Functions and Other Reference</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/images/release-notes.html?s_cid=doc_flyout">Release Notes</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/releases/R2015a/pdf_doc/images/index.html?s_cid=doc_flyout">PDF Documentation</a></li>
+</ul>
+</div>
+</li>
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="http://www.mathworks.com/help/images/image-enhancement-and-restoration.html" itemprop="url"><span itemprop="title">Image Enhancement</span></a></li>
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="http://www.mathworks.com/help/images/morphological-filtering.html" itemprop="url"><span itemprop="title">Morphological Operations</span></a></li>
+</ul>
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_disambiguation">
+<li><a href="http://www.mathworks.com/help/images/index.html">Image Processing Toolbox</a>
+</li>
+<li><a href="http://www.mathworks.com/help/images/code-generation.html" itemprop="url">Code Generation</a></li>
+</ul>
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_scrollspy nav">
+<li class="nav_scrollspy_function"><a href="http://www.mathworks.com/help/images/ref/strel.html#responsive_offcanvas">strel</a></li>
+<li class="nav_scrollspy_title" id="SSPY810-refentry">On this page</li>
+<li><a href="http://www.mathworks.com/help/images/ref/strel.html#syntax" class="intrnllnk">Syntax</a></li>
+<li class="active"><a href="http://www.mathworks.com/help/images/ref/strel.html#zmw57dd0e96856" class="intrnllnk">Description</a></li>
+<li class=""><a href="http://www.mathworks.com/help/images/ref/strel.html#zmw57dd0e97272" class="intrnllnk">Notes</a></li>
+<li class=""><a href="http://www.mathworks.com/help/images/ref/strel.html#zmw57dd0e97289" class="intrnllnk">Methods</a></li>
+<li class=""><a href="http://www.mathworks.com/help/images/ref/strel.html#zmw57dd0e97366" class="intrnllnk">Examples</a></li>
+<li class=""><a href="http://www.mathworks.com/help/images/ref/strel.html#moreabout" class="intrnllnk">More About</a><ul class="nav">
+<li class=""><a href="http://www.mathworks.com/help/images/ref/strel.html#bur67r5-1" class="intrnllnk">Tips</a></li>
+<li class=""><a href="http://www.mathworks.com/help/images/ref/strel.html#f6-256975" class="intrnllnk">Algorithms</a></li>
+</ul>
+</li><li class=""><a href="http://www.mathworks.com/help/images/ref/strel.html#zmw57dd0e97439" class="intrnllnk">References</a></li>
+</ul>
+
+      </nav>
+      <script src="./Create morphological structuring element (STREL) - MATLAB strel_files/offcanvas.js"></script>
+    </div>
+
+    <!-- MOBILE CTA - Begin -->
+    <!-- MOBILE CTA - End -->
+
+
+    <div class="content_container" id="content_container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            
+
+
+
+
+
+
+           
+     
+    
+           
+<section id="doc_center_content" lang="en"><div id="pgtype-ref-function"><div class="function_ref">
+  
+
+<span id="f6-223233" class="anchor_target"></span><a class="indexterm" name="zmw57dd0e96839"></a><div itemprop="content"><h1 class="r2015a" itemprop="title">strel</h1><!-- SYNCHTO: _bqj6g67.html --><div class="doc_topic_desc"><div class="purpose_container"><p itemprop="purpose">Create morphological structuring element (<code>STREL</code>)</p></div></div></div>
+<span id="f6-223236" class="anchor_target"></span><div class="ref_sect"><h2 id="syntax">Syntax</h2><div class="syntax_signature"><p class="synopsis"><code>SE = strel(<i><code>shape</code></i>,
+parameters)<br>SE = strel('arbitrary', NHOOD)<br>SE = strel('arbitrary', NHOOD, HEIGHT)<br>SE = strel('ball', R, H, N)<br>SE = strel('diamond', R)<br>SE = strel('disk', R, N)<br>SE = strel('line', LEN, DEG)<br>SE = strel('octagon', R)<br>SE = strel('pair', OFFSET)<br>SE = strel('periodicline', P, V)<br>SE = strel('rectangle', MN)<br>SE = strel('square', W)<br></code></p></div></div><div class="clear"></div><div itemprop="content" class="ref_sect"><span id="f6-223238" class="anchor_target"></span><h2 id="zmw57dd0e96856">Description</h2><p><span itemprop="syntax"><code><span id="f6-223239" class="anchor_target"></span>SE = strel(<i><code>shape</code></i>,
+parameters)</code></span> creates a structuring element, <code>SE</code>,
+of the type specified by <code>shape</code>. This table lists
+all the supported shapes. Depending on <code>shape</code>, <code>strel</code> can
+take additional parameters. See the syntax descriptions that follow
+for details about creating each type of structuring element.</p><div class="table-responsive"><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="47%"><col width="53%"></colgroup><thead><tr valign="top"><th colspan="2" valign="top"><p>Flat
+Structuring Elements</p></th></tr>
+</thead><tbody><tr valign="top"><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9bn" class="intrnllnk">'arbitrary'</a></code></p></td><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9c7" class="intrnllnk">'pair'</a></code></p></td></tr>
+<tr valign="top"><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9jz" class="intrnllnk">'diamond'</a></code></p></td><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9kd" class="intrnllnk">'periodicline'</a></code></p></td></tr>
+<tr valign="top"><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9dn" class="intrnllnk">'disk'</a></code></p></td><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9dy" class="intrnllnk">'rectangle'</a></code></p></td></tr>
+<tr valign="top"><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9de" class="intrnllnk">'line'</a></code></p></td><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9d3" class="intrnllnk">'square'</a></code></p></td></tr>
+<tr valign="top"><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9da" class="intrnllnk">'octagon'</a></code></p></td><td>&nbsp;</td></tr>
+</tbody></table></div><p></p><div class="table-responsive"><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="47%"><col width="53%"></colgroup><thead><tr valign="top"><th colspan="2"><p>Nonflat Structuring
+Elements</p></th></tr>
+</thead><tbody><tr valign="top"><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9jn" class="intrnllnk">'arbitrary'</a></code></p></td><td><p><code><a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9ju" class="intrnllnk">'ball'</a></code></p></td></tr>
+</tbody></table></div><p></p><p>This function supports code generation (see <a href="http://www.mathworks.com/help/images/ref/strel.html#bur67r5-1" class="intrnllnk">Tips</a>).</p><p><span id="bqkf9bn" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('arbitrary', NHOOD)</code></span> creates
+a flat structuring element where <code>NHOOD</code> specifies
+the neighborhood. <code>NHOOD</code> is a matrix containing
+1's and 0's; the location of the 1's defines the neighborhood for
+the morphological operation. The center (or <span class="emphasis"><em>origin</em></span>)
+of <code>NHOOD</code> is its center element, given by <code>floor((size(NHOOD)+1)/2)</code>.
+You can omit the <code>'arbitrary'</code> string and just use <code>strel(NHOOD)</code>.</p><p>
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/referencemtoz50.gif" height="82" width="205" alt=""></p><p><span id="bqkf9jn" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('arbitrary', NHOOD, HEIGHT)</code></span> creates
+a nonflat structuring element, where <code>NHOOD</code> specifies
+the neighborhood. <code>HEIGHT</code> is a matrix the same size
+as <code>NHOOD</code> containing the height values associated
+with each nonzero element of <code>NHOOD</code>. The <code>HEIGHT</code> matrix
+must be real and finite valued. You can omit the <code>'arbitrary'</code> string
+and just use <code>strel(NHOOD,HEIGHT)</code>.</p><p><span id="bqkf9ju" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('ball', R, H, N)</code></span> creates
+a nonflat, ball-shaped structuring element (actually an ellipsoid)
+whose radius in the <code>X-Y</code> plane is <code>R</code> and
+whose height is <code>H</code>. Note that <code>R</code> must
+be a nonnegative integer, <code>H</code> must be a real scalar,
+and <code>N</code> must be an even nonnegative integer. When <code>N</code> is
+greater than <code>0</code>, the ball-shaped structuring element
+is approximated by a sequence of <code>N</code> nonflat, line-shaped
+structuring elements. When <code>N</code> equals <code>0</code>,
+no approximation is used, and the structuring element members consist
+of all pixels whose centers are no greater than <code>R</code> away
+from the origin. The corresponding height values are determined from
+the formula of the ellipsoid specified by <code>R</code> and <code>H</code>.
+If <code>N</code> is not specified, the default value is 8.</p><ul><span id="zmw57dd0e97068" class="anchor_target"></span><table cellspacing="0" class="note" summary="Note" cellpadding="5" border="1"><tbody><tr width="90%"><td><p><b>Note</b>&nbsp;&nbsp;
+
+
+Morphological operations run much faster when the structuring
+element uses approximations <code>(N &gt; 0)</code> than when
+it does not <code>(N = 0)</code>.</p></td></tr></tbody></table></ul><p><span id="bqkf9jz" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('diamond', R)</code></span> creates
+a flat, diamond-shaped structuring element, where <code>R</code> specifies
+the distance from the structuring element origin to the points of
+the diamond. <code>R</code> must be a nonnegative integer scalar.</p><p>
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/referencemtoz55.gif" height="132" width="236" alt=""></p><p><span id="bqkf9dn" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('disk', R, N)</code></span> creates
+a flat, disk-shaped structuring element, where <code>R</code> specifies
+the radius. <code>R</code> must be a nonnegative integer. <code>N</code> must
+be <code>0</code>, <code>4</code>, <code>6</code>,
+or <code>8</code>. When <code>N</code> is greater than
+0, the disk-shaped structuring element is approximated by a sequence
+of <code>N</code> <a href="http://www.mathworks.com/help/images/ref/strel.html#bqkf9kd" class="intrnllnk">periodic-line</a> structuring
+elements. When <code>N</code> equals <code>0</code>, no
+approximation is used, and the structuring element members consist
+of all pixels whose centers are no greater than <code>R</code> away
+from the origin. If <code>N</code> is not specified, the default
+value is <code>4</code>.</p><ul><span id="zmw57dd0e97142" class="anchor_target"></span><table cellspacing="0" class="note" summary="Note" cellpadding="5" border="1"><tbody><tr width="90%"><td><p><b>Note</b>&nbsp;&nbsp;
+
+
+Morphological operations run much faster when the structuring
+element uses approximations <code>(N &gt; 0)</code> than when
+it does not <code>(N = 0)</code>. However, structuring elements
+that do not use approximations <code>(N = 0)</code> are not
+suitable for computing granulometries. Sometimes it is necessary for <code>strel</code> to
+use two extra line structuring elements in the approximation, in which
+case the number of decomposed structuring elements used is <code>N
++ 2</code>.</p></td></tr></tbody></table></ul><p>
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/referencemtoz58.gif" height="126" width="244" alt=""></p><p><span id="bqkf9de" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('line', LEN, DEG)</code></span> creates
+a flat linear structuring element that is symmetric with respect to
+the neighborhood center. <code>DEG</code> specifies the angle
+(in degrees) of the line as measured in a counterclockwise direction
+from the horizontal axis. <code>LEN</code> is approximately
+the distance between the centers of the structuring element members
+at opposite ends of the line.</p><p>
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/referencemtoz61.gif" height="163" width="236" alt=""></p><p><span id="bqkf9da" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('octagon', R)</code></span> creates
+a flat, octagonal structuring element, where <code>R</code> specifies
+the distance from the structuring element origin to the sides of the
+octagon, as measured along the horizontal and vertical axes. <code>R</code> must
+be a nonnegative multiple of 3.</p><p>
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/referencemtoz65.gif" height="121" width="245" alt=""></p><p><span id="bqkf9c7" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('pair', OFFSET)</code></span> creates
+a flat structuring element containing two members. One member is located
+at the origin. The second member's location is specified by the vector <code>OFFSET</code>. <code>OFFSET</code> must
+be a two-element vector of integers.</p><p>
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/referencemtoz69.gif" height="101" width="185" alt=""></p><p><span id="bqkf9kd" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('periodicline', P, V)</code></span> creates
+a flat structuring element containing <code>2*P+1</code> members. <code>V</code> is
+a two-element vector containing integer-valued row and column offsets.
+One structuring element member is located at the origin. The other
+members are located at <code>1*V</code>, <code>-1*V</code>, <code>2*V</code>, <code>-2*V</code>, <code>...</code>, <code>P*V</code>, <code>-P*V</code>. <span class="inlinemediaobject">
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/referencemtoz72.gif" height="106" width="329" alt=""></span></p><p><span id="bqkf9dy" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('rectangle', MN)</code></span> creates
+a flat, rectangle-shaped structuring element, where <code>MN</code> specifies
+the size. <code>MN</code> must be a two-element vector of nonnegative
+integers. The first element of <code>MN</code> is the number
+of rows in the structuring element neighborhood; the second element
+is the number of columns.</p><p>
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/referencemtoz75.gif" height="82" width="180" alt=""></p><p><span id="bqkf9d3" class="anchor_target"></span><span itemprop="syntax"><code>SE = strel('square', W)</code></span> creates
+a square structuring element whose width is <code>W</code> pixels. <code>W</code> must
+be a nonnegative integer scalar. <span class="inlinemediaobject">
+<img src="./Create morphological structuring element (STREL) - MATLAB strel_files/referencemtoz78.gif" height="72" width="115" alt=""></span></p></div><div itemprop="content" id="f6-223520" class="ref_sect"><span id="f6-223520" class="anchor_target"></span><h2 id="zmw57dd0e97272">Notes</h2><p>For all shapes except <code>'arbitrary'</code>, structuring
+elements are constructed using a family of techniques known collectively
+as <span class="emphasis"><em>structuring element decomposition</em></span>. The principle
+is that dilation by some large structuring elements can be computed
+faster by dilation with a sequence of smaller structuring elements.
+For example, dilation by an 11-by-11 square structuring element can
+be accomplished by dilating first with a 1-by-11 structuring element
+and then with an 11-by-1 structuring element. This results in a theoretical
+performance improvement of a factor of 5.5, although in practice the
+actual performance improvement is somewhat less. Structuring element
+decompositions used for the <code>'disk'</code> and <code>'ball'</code> shapes
+are approximations; all other decompositions are exact.</p></div><div itemprop="content" id="f6-249119" class="ref_sect"><span id="f6-249119" class="anchor_target"></span><h2 id="zmw57dd0e97289">Methods</h2><p>This table lists the methods supported by the <code>STREL</code> object.</p><div class="table-responsive"><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="26%"><col width="74%"></colgroup><thead><tr valign="top"><th><p>Method</p></th><th><p>Description</p></th></tr>
+</thead><tbody><tr valign="top"><td><p><a href="http://www.mathworks.com/help/images/ref/getheight.html"><code>getheight</code></a></p></td><td><p>Get height of structuring element</p></td></tr>
+<tr valign="top"><td><p><a href="http://www.mathworks.com/help/images/ref/getneighbors.html"><code>getneighbors</code></a></p></td><td><p>Get structuring element neighbor locations and heights</p></td></tr>
+<tr valign="top"><td><p><a href="http://www.mathworks.com/help/images/ref/getnhood.html"><code>getnhood</code></a></p></td><td><p>Get structuring element neighborhood</p></td></tr>
+<tr valign="top"><td><p><a href="http://www.mathworks.com/help/images/ref/getsequence.html"><code>getsequence</code></a></p></td><td><p>Extract sequence of decomposed structuring elements</p></td></tr>
+<tr valign="top"><td><p><a href="http://www.mathworks.com/help/images/ref/isflat.html"><code>isflat</code></a></p></td><td><p>Return true for flat structuring element</p></td></tr>
+<tr valign="top"><td><p><a href="http://www.mathworks.com/help/images/ref/reflect.html"><code>reflect</code></a></p></td><td><p>Reflect structuring element</p></td></tr>
+<tr valign="top"><td><p><a href="http://www.mathworks.com/help/images/ref/translate.html"><code>translate</code></a></p></td><td><p>Translate structuring element</p></td></tr>
+</tbody></table></div><p></p></div><div itemprop="content" class="ref_sect"><span id="f6-223522" class="anchor_target"></span><h2 id="zmw57dd0e97366">Examples</h2><div class="code_responsive"><pre class="programlisting">se1 = strel('square',11)      % 11-by-11 square
+se2 = strel('line',10,45)     % length 10, angle 45 degrees
+se3 = strel('disk',15)        % disk, radius 15
+se4 = strel('ball',15,5)      % ball, radius 15, height 5
+</pre></div></div><div itemprop="content" class="ref_sect"></div><div itemprop="content"></div><div class="clear"></div><div class="moreabout ref_sect"><h2 id="moreabout">More About</h2><div class="expandableContent"><p class="switch"><a href="javascript:void(0);" class="expandAllLink" data-allexpanded="true">collapse all</a></p><div class="expandableContent" itemprop="content"><span id="bur67r5-1" class="anchor_target"></span><h3 class="expand expanded" id="bur67r5-1"><span><a style="display:block;" href="javascript:void(0);" title="Expand/Collapse"><span>Tips</span></a></span></h3><div class="collapse" style="display:block"><ul type="disc"><li><p>This function supports the generation of C code using <span>MATLAB<sup>®</sup> Coder™</span>.
+For more information, see <a href="http://www.mathworks.com/help/images/code-generation-for-image-processing.html">Code Generation for Image Processing</a>.</p><p> When generating code, note: </p><ul type="circle"><li><p>All input arguments must be compile-time constants.</p></li><li><p>The following methods are not supported for code generation: <code>getsequence</code>, <code>reflect</code>, <code>translate</code>, <code>disp</code>, <code>display</code>, <code>loadobj</code>.</p></li><li><p>You can only specify singular objects—arrays
+of objects are not supported.</p></li></ul></li></ul></div></div><div class="expandableContent" itemprop="content"><span id="f6-256975" class="anchor_target"></span><h3 class="expand expanded" id="f6-256975"><span><a style="display:block;" href="javascript:void(0);" title="Expand/Collapse"><span>Algorithms</span></a></span></h3><div class="collapse" style="display:block"><p>The method used to decompose diamond-shaped structuring elements
+is known as "logarithmic decomposition" [1].</p><p>The method used to decompose disk structuring elements is based
+on the technique called "radial decomposition using periodic lines"
+[2], [3]. For details, see the <code>MakeDiskStrel</code> subfunction
+in <code>toolbox/images/images/@strel/strel.m</code>.</p><p>The method used to decompose ball structuring elements is the
+technique called "radial decomposition of spheres" [2].</p></div></div></div></div><div itemprop="content" class="ref_sect"><span id="f6-223529" class="anchor_target"></span><h2 id="zmw57dd0e97439">References</h2><div class="bibliography"><span id="bqkhna2-1" class="anchor_target"></span><div id="BIBLIO.bqkhna2-1" class="bibliomixed"><p>[1] van den Boomgard, R, and R. van Balen,
+"Methods for Fast  Morphological Image Transforms Using Bitmapped
+Images," <i>Computer Vision,  Graphics, and Image Processing:
+Graphical Models and Image Processing</i>, Vol.  54, Number
+3, pp. 252–254, May 1992.</p></div><span id="bqkhna4-1" class="anchor_target"></span><div id="BIBLIO.bqkhna4-1" class="bibliomixed"><p>[2] Adams, R., "Radial Decomposition of Discs
+and Spheres," <i>Computer  Vision, Graphics, and Image Processing:
+Graphical Models and Image  Processing</i>, Vol. 55, Number
+5, pp. 325–332, September 1993. </p></div><span id="bqkhna6-1" class="anchor_target"></span><div id="BIBLIO.bqkhna6-1" class="bibliomixed"><p>[3] Jones, R., and P. Soille, "Periodic lines:
+Definition, cascades, and  application to granulometrie," <i>Pattern
+Recognition Letters</i>, Vol. 17, pp.  1057–1063, 1996.</p></div></div></div><div class="ref_sect"><h2>See Also</h2><p><span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="http://www.mathworks.com/help/images/ref/imdilate.html"><span itemprop="name"><code>imdilate</code></span></a></span> | <span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="http://www.mathworks.com/help/images/ref/imerode.html"><span itemprop="name"><code>imerode</code></span></a></span></p></div>
+</div></div></section>
+<div class="feedbackblock">Was this topic helpful?
+<input type="button" value="Yes" onclick="openFeedbackWindow(&#39;http://www.mathworks.com/programs/bounce_hub_help.html?s_cid=Help_Topic_Survey&amp;surveyParams=&#39;+document.location.href+&#39;-YES-R2015a&#39;);">
+<input type="button" value="No" onclick="openFeedbackWindow(&#39;http://www.mathworks.com/programs/bounce_hub_help.html?s_cid=Help_Topic_Survey&amp;surveyParams=&#39;+document.location.href+&#39;-NO-R2015a&#39;);">
+</div>
+<!--Last updated: Thu Feb 26 21:37:22 EST 2015-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE CTA - Begin -->
+    <div class="cta_container_mobile visible-xs">
+      <div class="container-fluid">      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="cta_box">
+<ul class="list-unstyled list-inline">
+<li class="cta_item cta_item_general"><a href="http://www.mathworks.com/programs/bounce/doc_tryit.html" class="icon-download">Trial Software</a></li>
+<li class="cta_item cta_item_general"><a href="http://www.mathworks.com/support/web_downloads_bounce.html?s_cid=1008_degr_docdn_270055" class="icon-download">Product Updates</a></li>
+</ul>
+</div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MOBILE CTA - End -->
+
+        <!-- BODY TRAIL - Begin -->
+        <div class="body_trail_container">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="row"><div class="col-xs-12 col-sm-3"><h5><a href="http://www.mathworks.com/help/images/index.html">Image Processing Toolbox Documentation</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="http://www.mathworks.com/help/images/getting-started-with-image-processing-toolbox.html?s_cid=doc_ftr">Getting Started</a></li>
+<li><a href="http://www.mathworks.com/help/images/examples.html?s_cid=doc_ftr">Examples</a></li>
+<li><a href="http://www.mathworks.com/help/images/functionlist.html?s_cid=doc_ftr">Functions and Other Reference</a></li>
+<li><a href="http://www.mathworks.com/help/images/release-notes.html?s_cid=doc_ftr">Release Notes</a></li>
+<li><a href="http://www.mathworks.com/help/releases/R2015a/pdf_doc/images/index.html?s_cid=doc_ftr">PDF Documentation</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-3"><h5><a href="http://www.mathworks.com/help/index.html">Other Documentation</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="http://www.mathworks.com/help/matlab/index.html">MATLAB</a></li><li><a href="http://www.mathworks.com/help/vision/index.html">Computer Vision System Toolbox</a></li><li><a href="http://www.mathworks.com/help/signal/index.html">Signal Processing Toolbox</a></li><li><a href="http://www.mathworks.com/help/stats/index.html">Statistics and Machine Learning Toolbox</a></li><li><a href="http://www.mathworks.com/help/symbolic/index.html">Symbolic Math Toolbox</a></li><li><a href="http://www.mathworks.com/help/index.html">All Products</a></li></ul>
+</div>
+<div class="col-xs-12 col-sm-3"><h5><a href="http://www.mathworks.com/support">Support</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="http://www.mathworks.com/matlabcentral/answers">MATLAB Answers</a></li><li><a href="http://www.mathworks.com/support/install-matlab.html">Installation Help</a></li><li><a href="http://www.mathworks.com/support/bugreports">Bug Reports</a></li><li><a href="http://www.mathworks.com/products/availability">Product Requirements</a></li><li><a href="http://www.mathworks.com/download">Software Downloads</a></li></ul>
+</div>
+<div class="col-xs-12 col-sm-3">
+<div class="panel panel_color_transparent panel_color_fill">
+<div class="panel-body"> <img src="./Create morphological structuring element (STREL) - MATLAB strel_files/bg-trial-arrow_02.png" class="add_margin_5">
+<h4>Try MATLAB, Simulink, and Other Products</h4>
+<a href="http://www.mathworks.com/programs/trials/trial_request.html?prodcode=IP&s_iid=doc_trial_IP_footer" class="icon-chevron">Get trial now </a>
+</div>
+</div>
+</div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BODY TRAIL - End -->
+
+    <footer id="footer" class="bs-footer">
+        <!-- FAT FOOTER - Begin --> 
+        <div class="container-fluid">
+          <div class="fat_footer_container">
+            <div class="execmatlabproduct">
+<p class="copyright">© 1994-2015 The MathWorks, Inc.</p>
+<ul class="footernav">
+<li class="footernav_acknowledgments"><a href="matlab:web([docroot '/acknowledgments.html'])">Acknowledgments</a></li>
+<li class="footernav_trademarks"><a href="matlab:web([matlabroot '/trademarks.txt'])">Trademarks</a></li>
+<li class="footernav_patents"><a href="matlab:web([matlabroot '/patents.txt'])">Patents</a></li>
+<li class="footernav_terms"><a href="matlab:web(matlab.internal.licenseAgreement)">Terms of Use</a></li>
+</ul>
+</div>
+          </div>
+        </div>
+        <!-- FAT FOOTER - End -->
+      <div class="container-fluid">
+       <div class="footer">
+<div class="row">
+<div class="col-xs-12 col-lg-9">
+<p class="copyright">© 1994-2015 The MathWorks, Inc.</p>
+<ul class="footernav">
+<li class="footernav_country">
+<a href="javascript:void(0);" data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="&lt;small&gt;&lt;div class=&#39;row&#39;&gt;&lt;div class=&#39;col-xs-12 col-sm-6&#39;&gt;&lt;ul class=&#39;list-unstyled&#39;&gt;&lt;li&gt;&lt;a href=&#39;http://www.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;United States&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://www.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Canada&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://au.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Australia&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://de.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Österreich&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://nl.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Belgium&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://cn.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;中国&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://se.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Denmark&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://se.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Finland&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://fr.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;France&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://de.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Deutschland&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://in.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;India&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://uk.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Ireland&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://it.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Italia&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&#39;col-xs-12 col-sm-6&#39;&gt;&lt;ul class=&#39;list-unstyled&#39;&gt;&lt;li&gt;&lt;a href=&#39;http://jp.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;日本&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://kr.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;한국&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://nl.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Luxembourg&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://nl.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Netherlands&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://au.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;New Zealand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://se.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Norway&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://www.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Portugal&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://es.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;España&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://se.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Sweden&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://ch.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;Schweiz / Suisse&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://uk.mathworks.com/help/images/ref/strel.html?action=changeCountry&amp;s_tid=gn_loc_drop&#39;&gt;United Kingdom&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;http://www.mathworks.com/company/worldwide/?s_tid=gn_loc_drop&#39;&gt;All Other Countries&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/small&gt;&lt;/ul&gt;" data-original-title="" title="">
+<span class="icon-globe"></span>
+United States
+<!-- <b class="caret"></b> -->
+</a>
+<script>
+$('.footernav_country a').popover();
+</script>
+</li>
+<li class="footernav_help"><a href="http://www.mathworks.com/help.html">Site Help</a></li>
+<li class="footernav_patents"><a href="http://www.mathworks.com/company/aboutus/policies_statements/patents.html">Patents</a></li>
+<li class="footernav_trademarks"><a href="http://www.mathworks.com/company/aboutus/policies_statements/trademarks.html">Trademarks</a></li>
+<li class="footernav_privacy"><a href="http://www.mathworks.com/company/aboutus/policies_statements/">Privacy Policy</a></li>
+<li class="footernav_piracy"><a href="http://www.mathworks.com/company/aboutus/policies_statements/piracy.html">Preventing Piracy</a></li>
+</ul>
+</div>
+<div class="clearfix visible-sm add_margin_30"></div>
+<div class="col-xs-12 col-lg-3">
+<div class="social_media">
+<ul class="social_media_icons">
+<li>
+<a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=http://www.facebook.com/MATLAB" target="_blank" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-facebook.svg" alt="Facebook" class="ico_facebook" type="image/svg+xml">
+<span class="ico_facebook ico_sm"></span>
+</object>
+</a>
+</li>
+<li>
+<a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_twt&url=http://www.twitter.com/MATLAB" target="_blank" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-twitter.svg" alt="Twitter" class="ico_twitter" type="image/svg+xml">
+<span class="ico_twitter ico_sm"></span>
+</object>
+</a>
+</li>
+<li>
+<a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_glg&url=https://plus.google.com/117177960465154322866?prsrc=3" target="_blank" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-google-plus.svg" alt="Google+" class="ico_google" type="image/svg+xml">
+<span class="ico_google ico_sm"></span>
+</object>
+</a>
+</li>
+<li>
+<a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_lkd&url=http://www.linkedin.com/company/the-mathworks_2" target="_blank" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-linkedin.svg" alt="LinkedIn" class="ico_linkedin" type="image/svg+xml">
+<span class="ico_linkedin ico_sm"></span>
+</object>
+</a>
+</li>
+<li>
+<a href="http://www.mathworks.com/company/rss/index.html" class="svg_link">
+<object data="http://www.mathworks.com/images/responsive/global/ico-rss.svg" alt="RSS" class="ico_rss" type="image/svg+xml">
+<span class="ico_rss ico_sm"></span>
+</object>
+</a>
+</li>
+</ul>
+<div class="clearfix"></div>
+<p><em>Join the conversation</em></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quantcast Tag -->
+<script>
+(function(){
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/aquant.js?a=p-zfNtLVVEHXE-1";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem,scpt);
+}());
+var smarttagdata={qacct: 'p-zfNtLVVEHXE-1',
+orderid: '',
+revenue: '',
+};
+</script>
+<noscript>
+&lt;img src="//pixel.quantserve.com/pixel/p-zfNtLVVEHXE-1.gif?labels=_fp.event.Default;" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/&gt;
+</noscript>
+<!-- End Quantcast tag -->
+<!-- BEGIN Google Code for UK and .COM Domains-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1023777138;
+var google_conversion_label = "SVIBCMq3xwIQ8rKW6AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/conversion.js">
+</script><iframe name="google_conversion_frame" title="Google conversion frame" width="0" height="0" src="about:blank" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 300px 13px;">&lt;img height="1" width="1" border="0" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1023777138/?frame=0&amp;random=1428325174688&amp;cv=7&amp;fst=1428325174688&amp;num=1&amp;fmt=1&amp;label=SVIBCMq3xwIQ8rKW6AM&amp;guid=ON&amp;u_h=900&amp;u_w=1600&amp;u_ah=900&amp;u_aw=1600&amp;u_cd=24&amp;u_his=1&amp;u_tz=-240&amp;u_java=true&amp;u_nplug=17&amp;u_nmime=30&amp;frm=0&amp;url=http%3A//www.mathworks.com/help/images/ref/strel.html&amp;ref=https%3A//www.google.com/&amp;vis=1" /&gt;</iframe>
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1023777138/?value=0&amp;label=SVIBCMq3xwIQ8rKW6AM&amp;guid=ON&amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+<!-- END Google Code for UK and .COM Domains-->
+<!-- BEGIN Adobe DTM -->
+<script type="text/javascript">
+try {
+_satellite.pageBottom();
+} catch (e) {
+//something went wrong
+}
+</script>
+<!-- END Adobe DTM -->
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="./Create morphological structuring element (STREL) - MATLAB strel_files/s_code.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+if (typeof mboxLoadSCPlugin == 'function') {
+mboxLoadSCPlugin(s);
+}
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->
+<!-- BEGIN Qualaroo -->
+<script type="text/javascript">
+var _kiq = _kiq || [];
+(function(){
+setTimeout(function(){
+var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+s.async = true; s.src = '//s3.amazonaws.com/ki.js/49559/ahy.js'; f.parentNode.insertBefore(s, f);
+}, 1);
+})();
+</script>
+<!-- END Qualaroo -->
+      </div>
+    </footer>
+
+  </div><script src="./Create morphological structuring element (STREL) - MATLAB strel_files/standard"></script>
+
+
+
+<a class="btn btn_primary" id="go-top" style="display: inline;"><span class="icon-arrow-open-up icon_24"></span></a></body></html>
