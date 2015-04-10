@@ -30,7 +30,8 @@ end
 prefix = '../ImageSet5/sil';
 format = '.jpg';
 
-for ii=1:size(images,2)
+% for ii=1:size(images,2)
+for ii=33:34
     image = images{ii};
     colorEdge = coloredges(image);
     [~, thresh] = edge(colorEdge, 'canny');
