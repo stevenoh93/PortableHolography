@@ -1,0 +1,1 @@
+middle tick, 15 60, 20 to 340 increment 20
