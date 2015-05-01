@@ -15,7 +15,7 @@ function [selx,sely,indexnr]=lasso(x,y)
 %         
 % T.Rutten V2.0/9/2003
 
-plot(x,y,'.')
+figure, plot(x,y,'.')
 
 las_x=[];
 las_y=[];
@@ -37,7 +37,7 @@ end
 while c==1 
     [a,b,c]=ginput(1);
     las_x=[las_x;a];las_y=[las_y;b];
-    line(las_x,las_y)
+    line(las_x,las_y,'LineWidth',4,'Color','r')
 end;
 
 las_x(length(las_x)+1)=las_x(1);
